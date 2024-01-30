@@ -40,14 +40,25 @@ button {
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: Helvetica Neue, "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 450;
+  font-weight: 500;
   font-style: normal;
 }
 
 main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  height: 90vh;
+}
+main p {
+  font-size: 20px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  main p {
+    font-size: 16px;
+  }
 }
