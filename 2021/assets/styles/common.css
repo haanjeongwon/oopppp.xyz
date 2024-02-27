@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "glyphs";
+  font-weight: 500;
+  src: url("/assets/fonts/Glyphs-Medium.woff2") format("woff2");
+  src: url("/assets/fonts/Glyphs-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "gothic-a1";
+  font-weight: 500;
+  src: url("/assets/fonts/GothicA1-SemiBold-Custom.woff2") format("woff2");
+  src: url("/assets/fonts/GothicA1-SemiBold-Custom.woff") format("woff");
+}
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-display: block;
+  font-style: normal;
+  word-break: keep-all;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  background-color: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  display: block;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+a, a:hover, a:visited {
+  color: #ff4800;
+  cursor: pointer;
+  user-select: none;
+}
+
+button {
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.win body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 0.2px;
+}
+
+body, button {
+  font-family: glyphs, gitan-latin, gothic-a1, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.003em;
+  word-spacing: -0.03em;
+  line-height: 1.58;
+}
+@media (max-width: 900px) {
+  body, button {
+    font-size: 14px;
+  }
+}
+
+.tt .ff {
+  position: relative;
+  bottom: 0.4pt;
+  font-size: 94%;
+  letter-spacing: -0.1pt;
+  line-height: 1;
+}
+
+em {
+  font-style: normal;
+  text-decoration: none;
+  border-bottom: solid 2px #000;
+  padding-bottom: 1px;
+}
+
+header {
+  padding: 12px 18px;
+  display: flex;
+  flex-flow: row nowrap;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30vw;
+}
+header * {
+  display: block;
+  width: 50%;
+  color: #ff4800;
+}
+@media (max-width: 900px) {
+  header {
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 46px;
+    font-size: 18px;
+  }
+}
+
+footer {
+  padding: 12px 18px;
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+}
+@media (max-width: 900px) {
+  footer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+  height: auto;
+}
+@media (max-width: 900px) {
+  main {
+    flex-flow: column nowrap;
+  }
+}
+
+section {
+  padding: 12px 18px;
+}
+section#intro {
+  width: 40vw;
+}
+section#intro p {
+  margin-bottom: 18px;
+}
+section#intro p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+  section#intro p {
+    margin-bottom: 12px;
+  }
+}
+section#works {
+  width: 30vw;
+}
+section#works .work {
+  display: inline-block;
+}
+section#works .title {
+  cursor: pointer;
+}
+@media (min-width: 901px) {
+  section#works .title:hover {
+    color: #EEE;
+  }
+}
+section#works .title .size {
+  display: inline-block;
+  position: relative;
+  bottom: 2.6pt;
+  margin-left: 6px;
+  font-size: 75%;
+}
+@media (max-width: 900px) {
+  section#works .title .size {
+    bottom: 2pt;
+  }
+}
+section#works .statement {
+  height: 0;
+  padding-right: 15%;
+  overflow: hidden;
+}
+section#works .statement.show {
+  height: auto;
+}
+section#works .statement a {
+  display: inline-block;
+  margin: 6px 0 18px 0;
+}
+section#works .statement p {
+  margin-bottom: 18px;
+}
+section#works .statement p:last-child {
+  margin-bottom: 32px;
+}
+@media (max-width: 900px) {
+  section#works .statement a {
+    margin: 12px 0;
+  }
+  section#works .statement p {
+    margin-bottom: 12px;
+  }
+  section#works .statement p:last-child {
+    margin-bottom: 28px;
+  }
+}
+section#credit {
+  position: fixed;
+  bottom: 30px;
+  right: 0;
+  width: 30vw;
+}
+section#credit ul li {
+  display: flex;
+  flex-flow: row nowrap;
+}
+section#credit ul li div:first-child {
+  width: 50%;
+}
+@media (max-width: 900px) {
+  section#intro, section#works, section#credit {
+    position: relative;
+    width: 100%;
+  }
+  section#intro {
+    padding-left: 20%;
+    margin-bottom: 38px;
+  }
+  section#works {
+    padding-left: 10%;
+    margin-bottom: 280px;
+  }
+  section#credit {
+    padding-left: 50%;
+    margin-bottom: 60px;
+  }
+}

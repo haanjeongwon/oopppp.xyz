@@ -1,0 +1,281 @@
+doctype html
+html
+  head
+    //- Google tag (gtag.js)
+    script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-XEGHJM83T2')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XEGHJM83T2');
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='apple-touch-icon' sizes='57x57' href='/2024/assets/images/favicon/apple-icon-57x57.png')
+    link(rel='apple-touch-icon' sizes='60x60' href='/2024/assets/images/favicon/apple-icon-60x60.png')
+    link(rel='apple-touch-icon' sizes='72x72' href='/2024/assets/images/favicon/apple-icon-72x72.png')
+    link(rel='apple-touch-icon' sizes='76x76' href='/2024/assets/images/favicon/apple-icon-76x76.png')
+    link(rel='apple-touch-icon' sizes='114x114' href='/2024/assets/images/favicon/apple-icon-114x114.png')
+    link(rel='apple-touch-icon' sizes='120x120' href='/2024/assets/images/favicon/apple-icon-120x120.png')
+    link(rel='apple-touch-icon' sizes='144x144' href='/2024/assets/images/favicon/apple-icon-144x144.png')
+    link(rel='apple-touch-icon' sizes='152x152' href='/2024/assets/images/favicon/apple-icon-152x152.png')
+    link(rel='apple-touch-icon' sizes='180x180' href='/2024/assets/images/favicon/apple-icon-180x180.png')
+    link(rel='icon' type='image/png' sizes='192x192' href='/2024/assets/images/favicon/android-icon-192x192.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/2024/assets/images/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='96x96' href='/2024/assets/images/favicon/favicon-96x96.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/2024/assets/images/favicon/favicon-16x16.png')
+    meta(name='msapplication-TileImage' content='/2024/assets/images/favicon/ms-icon-144x144.png')
+    meta(name='theme-color' content='#000000')
+    title OPP 2024 SPRING «New Face»
+    script.
+      (function(d) {var config = {kitId: 'sbe7hzx', scriptTimeout: 3000, async: true}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);
+    link(rel='stylesheet' href='/2024/assets/styles/common.css')
+    script(src='/assets/scripts/cssbrowserselector.js')
+    script(src='/2024/assets/scripts/common.js' defer)
+    script(src='/2024/assets/scripts/main.js' defer)
+    script(src='/assets/scripts/seokki-hangul-beta.js' defer)
+
+  body#main
+
+    header#header
+      a(href='/2024' target='_self') 
+        img(src='/2024/assets/images/private/opp-2024-logo.svg' alt='OPP 2024 SPRING - NEW FACE')
+      button#btn-accessibility
+        img(src='/2024/assets/images/private/accessibility-icon.svg' alt='')
+      #info-accessibility
+        .info
+          p.tt 보기에 불편함을 겪고 계신가요?
+          p.tt 배경색을 없애보세요.
+        button#close-accessibility
+          img(src='/2024/assets/images/private/accessibility-close.svg' alt='')
+        button#toggle-accessibility
+          .if-on
+            p 접근성 끄기
+            p 현재 켠 상태
+          .if-off
+            p 접근성 켜기
+            p 현재 끈 상태
+
+    nav#nav
+      .inner
+        //- a(href='/2024/room-a' target='_self') [A]
+        //- a(href='/2024/room-b' target='_self') [B]
+        //- a(href='/2024/room-c' target='_self') [C]
+        //- a(href='/2024/room-d' target='_self') [D]
+        a#scroll-top
+          img.basic(src='/2024/assets/images/private/arrow-top.svg' alt='')
+          img.white(src='/2024/assets/images/private/arrow-top-white.svg' alt='')
+
+    #main-wrap
+      main#main-main
+        .inner
+          //- section#intro
+          //-   #intro-info
+          //-     p.tt OPP의 2024년 봄 구성원들은 자신이 좋아하고 널리 알리고 싶은 다섯 권의 책을 추천한 뒤 각 책을 감쌀 수 있는 책싸개를 디자인했습니다. 책의 제목, 내용 전체 혹은 문장 한 줄, 기존의 표지, 관련된 개인적 경험 등 서로 다른 관점에서 서로 다른 방식으로 재해석된 이 책싸개들은 방문자에게 인쇄 가능한 PDF 파일로 제공됩니다.
+          //-     p.en In the spring of 2024, each member of OPP nominated five books they loved and wanted to publicize, and then designed a book wrapper for each book. These book wrappers, which are reinterpreted in different ways from different perspectives, including the title, the entire content or a single sentence, the existing cover, and related personal experiences, are provided to visitors as printable PDF files.
+          //-   ul#credit
+          //-     li
+          //-       .credit-field
+          //-         p.tt 전시 기획
+          //-       .credit-name
+          //-         p.tt 고정은
+          //-         p.tt 배­현­
+          //-         p.tt 송유진
+          //-         p.tt 한정원
+          //-         p.tt 허진욱
+          //-     li
+          //-       .credit-field
+          //-         p.tt 디자인 · 개발
+          //-       .credit-name
+          //-         p.tt 한정원
+
+          //- section#rooms-info
+          //-   p
+          //-     span.tt 이 전시는 네 개의 전시실로 구성되어 있습니다.
+          //-     br
+          //-     span.tt 전시실에서 작업물을 구경하거나 아래로 계속 여행하세요.
+          //-   p.en This exhibition is organized into four rooms.<br>See the works in the rooms or continue your journey below.
+
+          //- section#rooms
+          //-   ul
+          //-     a(href='/2024/room-a' target='_self')
+          //-       li
+          //-         p.room-name ROOM A
+          //-         p.room-field 디자인
+          //-         img(src='/2024/assets/images/private/arrow-room.svg' alt='')
+          //-     a(href='/2024/room-b' target='_self')
+          //-       li
+          //-         p.room-name ROOM B
+          //-         p.room-field 문학
+          //-         img(src='/2024/assets/images/private/arrow-room.svg' alt='')
+          //-     a(href='/2024/room-c' target='_self')
+          //-       li
+          //-         p.room-name ROOM C
+          //-         p.room-field 에세이
+          //-         img(src='/2024/assets/images/private/arrow-room.svg' alt='')
+          //-     a(href='/2024/room-d' target='_self')
+          //-       li
+          //-         p.room-name ROOM D
+          //-         p.room-field 기술·인문<br>사회·교양
+          //-         img(src='/2024/assets/images/private/arrow-room.svg' alt='')
+
+          //- section#members
+          //-   ul
+          //-     li.member
+          //-       .member-name.tt 고정은 Jeongeun Ko
+          //-       ul.member-works.hide
+          //-         li.works
+          //-           a(href='/2024/room-a')
+          //-             p.tt [A] 가지런히 어지르고 흩트리며 정리하기
+          //-         li.works
+          //-           a(href='/2024/room-a')
+          //-             p.tt [A] 차별 없는 디자인하기
+          //-         li.works
+          //-           a(href='/2024/room-c')
+          //-             p.tt [C] 그러나 우리가 사랑으로
+          //-         li.works
+          //-           a(href='/2024/room-c')
+          //-             p.tt [C] 삶의 발명
+          //-         li.works
+          //-           a(href='/2024/room-c')
+          //-             p.tt [C] 슬픈 세상의 기쁜 말
+          //-       .member-introduce
+          //-         p.tt 대학에서 영상편집제작을 공부했다. 연출, 촬영, 편집, 후보정과 같은 영상 분야와 더 나아가 그래픽디자인, 사진, 크리에이티브 디렉팅 등 넓은 분야에서 활동하고 있다. 추상적 존재의 시각적 연결 작업을 즐기며 주로 이미지를 다룬다. 최근에는 장르를 불문한 다양한 디자인을 경험하며 연습 중에 있다.
+          //-         p.en Jeongeun Ko studied film at university. She is active in a wide range of fields, including graphic design, photography, and creative direction, as well as in video fields such as directing, editing, and cinematography. She enjoys making visual connections between abstract entities and works mainly with images. Recently, she has been practicing and experiencing various design genres.
+          //-       .member-link
+          //-         a(href='https://kokosworks.com' target='_blank') 웹사이트
+          //-         a(href='https://www.instagram.com/11_jeunn_23' target='_blank') 인스타그램
+          //-         a(href='mailto:jeunn1123@naver.com') 메일
+          //-     li.member
+          //-       .member-name.tt 배현 Hyeon Bae
+          //-       ul.member-works.hide
+          //-         li.works
+          //-           a(href='/2024/room-a')
+          //-             p.tt [A] Designed Matter : 디자인된 문제들
+          //-         li.works
+          //-           a(href='/2024/room-a')
+          //-             p.tt [A] 에릭 길 : 타이포그래피에 관한 에세이
+          //-         li.works
+          //-           a(href='/2024/room-b')
+          //-             p.tt [B] 문체 연습
+          //-         li.works
+          //-           a(href='/2024/room-d')
+          //-             p.tt [D] 새로운 질서
+          //-         li.works
+          //-           a(href='/2024/room-d')
+          //-             p.tt [D] 손자 병법
+          //-       .member-introduce
+          //-         p.tt 계원예술대학교에서 시각디자인을 공부했다. 이미지와 글자를 활용하여 새로운 질감을 만드는 것을 좋아하며 작업물을 보는 이들에게 즐거움을 주길 원한다. 최근에는 프로그래밍과 모션그래픽에 관심이 생겼다.
+          //-         p.en Hyeon Bae studied graphic design at Kaywon University of the Art and Design. He likes to play with images and letters to create new textures and hopes to bring joy to the viewer of his work. More recently, he has become interested in programming and motion graphics.
+          //-       .member-link
+          //-         a(href='https://www.instagram.com/beiiho' target='_blank') 인스타그램
+          //-         a(href='mailto:baehyeon0303@gmail.com') 메일
+          //-     li.member
+          //-       .member-name.tt 송유진 Yujin Song
+          //-       ul.member-works.hide
+          //-         li.works
+          //-           a(href='/2024/room-a')
+          //-             p.tt [A] 당신이 읽는 동안
+          //-         li.works
+          //-           a(href='/2024/room-b')
+          //-             p.tt [B] 비정기 간행물 때 Vol 01 : 잠이 오지 않을 때
+          //-         li.works
+          //-           a(href='/2024/room-c')
+          //-             p.tt [C] 책 만드는 일
+          //-         li.works
+          //-           a(href='/2024/room-d')
+          //-             p [D] Leaking Subjects and Bounding Boxes: On Training AI
+          //-         li.works
+          //-           a(href='/2024/room-d')
+          //-             p.tt [D] 비생산적인 생산의 시간
+          //-       .member-introduce
+          //-         p.tt 서울에서 시각디자인을 공부했으며, 읽는 것과 보는 것의 차이를 타이포그래피로 표현하는 데 관심이 있다. 아날로그로 작업한 후 디지털화하는 방식도 좋아한다. 실재하는 질감을 오직 디지털 도구만으로 표현하는 것에는 분명한 한계가 존재하기 때문이다.
+          //-         p.en Yujin Song studied graphic design in Seoul, South Korea, and is interested in expressing the difference between reading and seeing through typography. She also likes to work with analog and then digitize it. Because there are clear limitations to expressing real textures with only digital tools.
+          //-       .member-link
+          //-         a(href='https://www.instagram.com/zinnsong' target='_blank') 인스타그램
+          //-         a(href='mailto:syjmichelle@naver.com') 메일
+          //-     li.member
+          //-       .member-name.tt 한정원 Jeongwon Han
+          //-       ul.member-works.hide
+          //-         li.works
+          //-           a(href='/2024/room-a')
+          //-             p.tt [A] 다이어그램처럼 글쓰기
+          //-         li.works
+          //-           a(href='/2024/room-b')
+          //-             p.tt [B] 사물들
+          //-         li.works
+          //-           a(href='/2024/room-b')
+          //-             p.tt [B] 잠재문학실험실
+          //-         li.works
+          //-           a(href='/2024/room-c')
+          //-             p.tt [C] 죽은 자의 집 청소
+          //-         li.works
+          //-           a(href='/2024/room-d')
+          //-             p.tt [D] 프로그래머, 열정을 말하다
+          //-       .member-introduce
+          //-         p.tt 대한민국의 그래픽디자이너다. 계원예술대학교에서 시각디자인과 순수미술을 공부했고 프로젝트 그룹 OPP를 운영 중이다. 컴퓨터로 하는 모든 창작활동을 좋아하지만 특히 인쇄 매체와 디지털 매체를 넘나들며 작업하는 것을 즐긴다. 최근에는 웹 환경에서의 다국어 섞어짜기에 몰두하고 있다.
+          //-         p.en Jeongwon Han is a graphic designer in Seoul, South Korea. He studied graphic design and fine arts at Kaywon University of the Art and Design and runs the project group OPP. He loves all creative activities on the computer, but especially enjoys working across print and digital media. Recently, he has been focusing on multilingual typography in the web environment.
+          //-       .member-link
+          //-         a(href='https://danhan.kr' target='_blank') 웹사이트
+          //-         a(href='https://www.instagram.com/ueyuep' target='_blank') 인스타그램
+          //-         a(href='mailto:dan@danhan.kr') 메일
+          //-     li.member
+          //-       .member-name.tt 허진욱 Jinuk Heo
+          //-       ul.member-works.hide
+          //-         li.works
+          //-           a(href='/2024/room-a')
+          //-             p.tt [A] 종이는 아름답다
+          //-         li.works
+          //-           a(href='/2024/room-b')
+          //-             p.tt [B] 우울씨의 일일
+          //-         li.works
+          //-           a(href='/2024/room-b')
+          //-             p.tt [B] 육체의 악마
+          //-         li.works
+          //-           a(href='/2024/room-c')
+          //-             p.tt [C] 머라이어 케리
+          //-         li.works
+          //-           a(href='/2024/room-c')
+          //-             p.tt [C] 예술가와 위인들의 연애편지
+          //-       .member-introduce
+          //-         p.tt 계원예술대학교에서 시각디자인과 영상디자인을 공부했다. 단정히 정리된 상태에서 아름다움을 느끼며, 타이포그래피를 중심으로 의뢰인과 보는 이에게 편안한 커뮤니케이션을 제공하는 것을 목표로 한다.
+          //-         p.en Jinuk Heo studied graphic design and moving image design at Kaywon University of the Art and Design. He feels beauty in the neatly organized things and aims to provide comfortable communication to clients and viewers, focusing on typography.
+          //-       .member-link
+          //-         a(href='https://www.instagram.com/iwillbelovingyoulongtime' target='_blank') 인스타그램
+          //-         a(href='mailto:vparangv@gmail.com') 메일
+
+          //- section#opp-info
+          //-   p.tt OPP는 온라인 환경에서의 출판 방법을 모색하는 일시적 프로젝트 그룹입니다. 매번 다른 사람들이 모여 온라인 전시회를 연 뒤 미련 없이 헤어집니다. 디자인을 매개로 멋진 동료들을 찾는 데에 목적이 있습니다.
+          //-   p.en OPP is a temporary group of projects exploring ways to publish in an online environment. Each time, different people gather together to hold an online exhibition and then part ways without any regrets. It aims to find cool colleagues to work with through the medium of design.
+          //-   .opp-link
+          //-       a(href='/' target='_self') 웹사이트
+          //-       a(href='https://www.instagram.com/opp.xyz' target='_blank') 인스타그램
+          //-       a(href='mailto:dan@danhan.kr') 메일
+
+          section#opp-present
+            p.opp OPP Presents
+            p.newface NEW FACE
+            p.copyright © 2024 OPP.
+            #hook-nav
+      
+      #scroll-front.parallax(data-speed='1.4')
+        .box.box-f
+        .box.box-f
+        .box.box-f
+        .box.box-f
+        .box.box-f
+        .box.box-f#hook-front
+        .box.box-f
+        .box.box-f
+        .box.box-f
+        #attach-front
+      #scroll-back.parallax(data-speed='-0.5')
+        .box.box-b
+        .box.box-b
+        .box.box-b
+        .box.box-b
+        .box.box-b
+        .box.box-b#hook-back
+        .box.box-b
+        .box.box-b
+        .box.box-b
+        #attach-back

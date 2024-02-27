@@ -117,195 +117,144 @@ body
   letter-spacing: -0.010em
   word-spacing: 0.05em
 
-footer
+header
   position: fixed
-  bottom: 20px
+  top: -44px
   left: 0
   width: 100%
-  font-weight: 600
-  font-size: 20px
-  text-align: center
+  transition: top 1s ease
+  &.show
+    top: 0
+  .inner
+    position: relative
+    width: 100%
+    max-width: 1080px
+    margin: 0 auto
+    #opp-logo
+      position: absolute
+      top: 18px
+      left: 18px
+      height: 24px
+      font-weight: 600
+      font-size: 28px
+      img
+        height: 100%
   @include mobile
-    bottom: 40px
-    font-size: 15px
+    top: -38px
+    .inner
+      #opp-logo
+        top: 16px
+        left: 20px
+        height: 20px
 
-#under-construction
+footer
   display: flex
   flex-flow: column nowrap
-  align-items: center
-  justify-content: center
   width: 100%
-  height: calc(100vh - 120px)
-  padding: 100px 30px
-  img
-    width: 100%
-    max-width: 500px
+  padding: 120px 0 42px 0
+  text-align: center
+  color: #000
+
+//
+
+#opp-main
+  width: 100%
+  @include desktop
     margin-bottom: 60px
-  p
-    font-weight: 700
-    font-size: 28px
-  @include mobile
-    height: calc(100vh - 140px)
-    padding: 0px 20px
+  .inner
+    max-width: 800px
+    padding: 80px 80px
+    margin: 0 auto
+    @include mobile
+      padding: 80px 36px
     img
-      width: 70%
-      margin-bottom: 36px
-    p
+      width: 100%
+      margin: 0 auto
+      max-width: 600px
+
+#opp-info
+  .inner
+    display: flex
+    flex-flow: column nowrap
+    width: 100%
+    max-width: 800px
+    padding: 34px 40px
+    margin: 0 auto 120px auto
+    background: $lightgrey
+    .info-wrap
+      width: 80%
+      p
+        margin-bottom: 18px
+        &:last-child
+          margin-bottom: 0
+  @include mobile
+    .inner
+      width: calc(100% - 40px)
+      padding: 28px 32px
+      margin: 0 20px 100px 20px
+      .info-wrap
+        width: 90%
+        p
+          margin-bottom: 16px
+
+main
+  display: flex
+  flex-flow: column nowrap
+  width: 100%
+  max-width: 800px
+  padding: 0 0 0 0
+  margin: 0 auto
+  @include mobile
+    padding: 0 0 0 0
+
+#upcoming-project,
+#past-project
+  position: relative
+  margin-bottom: 120px
+  .section-title
+    position: absolute
+    top: -35px
+    left: 22px
+    padding: 12px 18px 4px 18px
+    font-weight: 700
+    font-size: 20px
+    letter-spacing: 0.000em
+    background: $lightgrey //#5F8AB3
+  .project-wrap
+    padding: 40px 40px 10px 40px
+    background: $lightgrey //#5F8AB3
+  h2
+    display: flex
+    flex-flow: column nowrap
+    font-size: 52px
+    letter-spacing: 0
+    line-height: 1
+    margin-bottom: 14px
+    p:first-child
+      font-size: 70%
+      padding-left: 1px
+      margin-bottom: -8px
+  .img-wrap
+    display: block
+    margin: 0 -30px
+    img
+      width: 100%
+  @include mobile
+    margin-bottom: 100px
+    .section-title
+      top: -30px
+      left: 20px
+      height: 38px
+      padding: 10px 17px 4px 17px
       font-size: 17px
-
-// header
-//   position: fixed
-//   top: -44px
-//   left: 0
-//   width: 100%
-//   transition: top 1s ease
-//   &.show
-//     top: 0
-//   .inner
-//     position: relative
-//     width: 100%
-//     max-width: 1080px
-//     margin: 0 auto
-//     #opp-logo
-//       position: absolute
-//       top: 18px
-//       left: 18px
-//       height: 24px
-//       font-weight: 600
-//       font-size: 28px
-//       img
-//         height: 100%
-//   @include mobile
-//     top: -38px
-//     .inner
-//       #opp-logo
-//         top: 16px
-//         left: 20px
-//         height: 20px
-
-// footer
-//   display: flex
-//   flex-flow: column nowrap
-//   width: 100%
-//   padding: 120px 0 42px 0
-//   text-align: center
-//   color: $lightgrey //#5F8AB3
-//   .link-wrap
-//     margin-bottom: 60px
-//     a, a:hover, a:visited
-//       display: block
-//       color: $lightgrey //#5F8AB3
-//     @include desktop
-//       a:hover
-//         color: #333
-//     a:first-child
-//       margin-bottom: 12px
-//   @include mobile
-//     .link-wrap
-//       margin-bottom: 40px
-//       a:first-child
-//         margin-bottom: 8px
-
-// #opp-main
-//   width: 100%
-//   margin-bottom: 400px
-//   background: #000
-//   .inner
-//     max-width: 1200px
-//     padding: 40px 40px
-//     margin: 0 auto
-//     img
-//       width: 100%
-//       max-width: 1200px
-//       margin: 0 auto
-//   @include mobile
-//     margin-bottom: 250px
-//     .inner
-//       padding: 20px 26px
-
-// #opp-info
-//   .inner
-//     display: flex
-//     flex-flow: column nowrap
-//     width: 100%
-//     max-width: 800px
-//     padding: 34px 40px
-//     margin: 0 auto 120px auto
-//     background: $lightgrey
-//     .info-wrap
-//       width: 80%
-//       p
-//         margin-bottom: 18px
-//         &:last-child
-//           margin-bottom: 0
-//   @include mobile
-//     .inner
-//       width: calc(100% - 40px)
-//       padding: 28px 32px
-//       margin: 0 20px 100px 20px
-//       .info-wrap
-//         width: 90%
-//         p
-//           margin-bottom: 16px
-
-// main
-//   display: flex
-//   flex-flow: column nowrap
-//   width: 100%
-//   max-width: 800px
-//   padding: 0 0 0 0
-//   margin: 0 auto
-//   @include mobile
-//     padding: 0 0 0 0
-
-// #upcoming-project,
-// #past-project
-//   position: relative
-//   margin-bottom: 120px
-//   .section-title
-//     position: absolute
-//     top: -35px
-//     left: 22px
-//     padding: 12px 18px 4px 18px
-//     font-weight: 700
-//     font-size: 20px
-//     letter-spacing: 0.000em
-//     background: $lightgrey //#5F8AB3
-//   .project-wrap
-//     padding: 40px 40px 10px 40px
-//     background: $lightgrey //#5F8AB3
-//   h2
-//     display: flex
-//     flex-flow: column nowrap
-//     font-size: 52px
-//     letter-spacing: 0
-//     line-height: 1
-//     margin-bottom: 14px
-//     p:first-child
-//       font-size: 70%
-//       padding-left: 1px
-//       margin-bottom: -8px
-//   .img-wrap
-//     display: block
-//     margin: 0 -30px
-//     img
-//       width: 100%
-//   @include mobile
-//     margin-bottom: 100px
-//     .section-title
-//       top: -30px
-//       left: 20px
-//       height: 38px
-//       padding: 10px 17px 4px 17px
-//       font-size: 17px
-//     .project-wrap
-//       padding: 30px 36px 26px 36px
-//     h2
-//       font-size: 40px
-//       margin-bottom: 14px
-//       p:first-child
-//         margin-bottom: -6px
-//     .img-wrap
-//       margin: 0 -26px
-//       img
-//         width: 100%
+    .project-wrap
+      padding: 30px 36px 26px 36px
+    h2
+      font-size: 40px
+      margin-bottom: 14px
+      p:first-child
+        margin-bottom: -6px
+    .img-wrap
+      margin: 0 -26px
+      img
+        width: 100%

@@ -1,0 +1,201 @@
+// *OPP 2021 SUMMER*
+
+@font-face
+  font-family: 'glyphs'
+  font-weight: 500
+  src: url('/assets/fonts/Glyphs-Medium.woff2') format('woff2')
+  src: url('/assets/fonts/Glyphs-Medium.woff') format('woff')
+
+@font-face
+  font-family: 'gothic-a1'
+  font-weight: 500
+  src: url('/assets/fonts/GothicA1-SemiBold-Custom.woff2') format('woff2')
+  src: url('/assets/fonts/GothicA1-SemiBold-Custom.woff') format('woff')
+
+@mixin mobile
+  @media (max-width: 900px)
+    @content
+
+@mixin desktop
+  @media (min-width: 901px)
+    @content
+
+*
+  border: 0
+  margin: 0
+  padding: 0
+  font-size: 100%
+  font-display: block
+  font-style: normal
+  word-break: keep-all
+  text-decoration: none
+  list-style: none
+  box-sizing: border-box
+  vertical-align: baseline
+  background-color: transparent
+  -ms-overflow-style: none
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
+
+img
+  display: block
+
+input:focus, textarea:focus
+  outline: none
+
+a, a:hover, a:visited
+  color: rgb(255, 72, 0)
+  cursor: pointer
+  user-select: none
+
+button
+  color: #000
+  cursor: pointer
+  user-select: none
+
+.win body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-stroke: 0.2px
+
+// typography
+
+body, button
+  font-family: glyphs, gitan-latin, gothic-a1, sans-serif
+  font-style: normal
+  font-weight: 500
+  font-size: 17px
+  letter-spacing: 0.003em
+  word-spacing: -0.03em
+  line-height: 1.58
+  @include mobile
+    font-size: 14px
+
+.tt
+  .ff
+    position: relative
+    bottom: 0.4pt
+    font-size: 94%
+    letter-spacing: -0.1pt
+    line-height: 1
+
+em
+  font-style: normal
+  text-decoration: none
+  border-bottom: solid 2px #000
+  padding-bottom: 1px
+
+// layouts
+
+header
+  padding: 12px 18px
+  display: flex
+  flex-flow: row nowrap
+  position: fixed
+  top: 0
+  right: 0
+  width: 30vw
+  *
+    display: block
+    width: 50%
+    color: rgb(255, 72, 0)
+  @include mobile
+    position: relative
+    width: 100%
+    padding: 12px 20px
+    margin-bottom: 46px
+    font-size: 18px
+
+footer
+  padding: 12px 18px
+  position: fixed
+  bottom: 30px
+  left: 0
+  @include mobile
+    position: relative
+    width: 100%
+    text-align: center
+
+main
+  display: flex
+  flex-flow: row nowrap
+  width: 100vw
+  height: auto
+  @include mobile
+    flex-flow: column nowrap
+
+section
+  padding: 12px 18px
+  &#intro
+    width: 40vw
+    p
+      margin-bottom: 18px
+      &:last-child
+        margin-bottom: 0
+    @include mobile
+      p
+        margin-bottom: 12px
+  &#works
+    width: 30vw
+    .work
+      display: inline-block
+    .title
+      cursor: pointer
+      @include desktop
+        &:hover
+          color: #EEE
+      .size
+        display: inline-block
+        position: relative
+        bottom: 2.6pt
+        margin-left: 6px
+        font-size: 75%
+        @include mobile
+          bottom: 2pt
+    .statement
+      height: 0
+      padding-right: 15%
+      overflow: hidden
+      &.show
+        height: auto
+      a
+        display: inline-block
+        margin: 6px 0 18px 0
+      p
+        margin-bottom: 18px
+        &:last-child
+          margin-bottom: 32px
+      @include mobile
+        a
+          margin: 12px 0
+        p
+          margin-bottom: 12px
+          &:last-child
+            margin-bottom: 28px
+  &#credit
+    position: fixed
+    bottom: 30px
+    right: 0
+    width: 30vw
+    ul
+      li
+        display: flex
+        flex-flow: row nowrap
+        div:first-child
+          width: 50%
+  @include mobile
+    &#intro,
+    &#works,
+    &#credit
+      position: relative
+      width: 100%
+    &#intro
+      padding-left: 20%
+      margin-bottom: 38px
+    &#works
+      padding-left: 10%
+      margin-bottom: 280px
+    &#credit
+      padding-left: 50%
+      margin-bottom: 60px
