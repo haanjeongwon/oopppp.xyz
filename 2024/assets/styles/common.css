@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "glyphs-newface";
+  font-weight: 400;
+  src: url("/2024/assets/fonts/Glyphs-NewFace.woff2") format("woff2");
+  src: url("/2024/assets/fonts/Glyphs-NewFace.woff") format("woff");
+}
 * {
   border: 0;
   margin: 0;
@@ -48,7 +54,7 @@ button {
 }
 
 body {
-  font-family: gimlet-text-compressed, agchoijeongho-screen, serif;
+  font-family: glyphs-newface, gimlet-text-compressed, agchoijeongho-screen, serif;
   font-weight: 400;
   background: #000;
   overflow-x: hidden;
@@ -292,8 +298,8 @@ footer {
   margin: 0 0 0 20px;
 }
 #nav .inner a img {
-  margin-top: 4px;
-  height: 31px;
+  margin-top: 9px;
+  height: 32px;
 }
 #nav .inner a img.white {
   display: none;
@@ -313,7 +319,7 @@ footer {
     font-size: 24px;
   }
   #nav .inner a img {
-    margin-top: 2px;
+    margin-top: 6px;
     height: 24px;
   }
 }
@@ -721,13 +727,7 @@ footer {
 }
 
 #opp-present {
-  margin-top: 500px;
   text-align: center;
-}
-@media (max-width: 900px) {
-  #opp-present {
-    margin-top: 300px;
-  }
 }
 #opp-present p {
   line-height: 1;
@@ -909,6 +909,9 @@ footer {
   text-align: right;
 }
 @media (max-width: 900px) {
+  #list {
+    margin: 0 auto 100px auto;
+  }
   #list ul li {
     padding: 17px 10px 15px 11px;
   }
@@ -946,6 +949,36 @@ footer {
   }
 }
 
+#guide-description {
+  width: 90%;
+  max-width: 400px;
+  padding: 24px 0 22px 0;
+  margin: 0 auto 200px auto;
+  background: #FFF;
+}
+#guide-description p {
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+#guide-description p.en {
+  line-height: 1.33;
+  margin: 4px 0 2px 0;
+}
+@media (max-width: 900px) {
+  #guide-description {
+    max-width: 280px;
+    padding: 16px 0 14px 0;
+    margin: 0 auto 100px auto;
+  }
+  #guide-description p {
+    font-size: 13px;
+  }
+  #guide-description p.en {
+    margin-top: 3px;
+  }
+}
+
 .work {
   width: 95%;
   max-width: 1000px;
@@ -956,7 +989,7 @@ footer {
 }
 .work .work-info {
   background: #DADADA;
-  border-bottom: solid 1px #000;
+  border-bottom: solid 8px #000;
 }
 .work .work-info .work-info-top {
   display: flex;
@@ -991,15 +1024,15 @@ footer {
 .work .work-image {
   position: relative;
   width: 100%;
-  background: grey;
-  border-bottom: solid 1px #000;
+  background: #282828;
+  border-bottom: solid 8px #000;
 }
 .work .work-image img {
   width: 100%;
 }
 .work .work-image .work-caption {
   position: absolute;
-  bottom: -1px;
+  bottom: 8px;
   right: -30px;
   width: 300px;
   padding: 32px 18px;
@@ -1020,8 +1053,9 @@ footer {
   margin-bottom: 0;
 }
 .work .work-image .work-caption p a, .work .work-image .work-caption p a:visited {
-  color: #FF4800;
-  border-bottom: solid 2px;
+  color: #FF5E2C;
+  padding-bottom: 1px;
+  border-bottom: dashed 1px;
 }
 @media (min-width: 901px) {
   .work .work-image .work-caption p a:hover {
@@ -1045,14 +1079,18 @@ footer {
   padding: 16px 18px 32px 18px;
 }
 .work .pdf-box .pdf-inner-bottom button {
-  font-family: gothic-a1, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1;
-  padding: 8px 10px 6px 10px;
+  height: 22px;
+  padding: 1px 6px 0px 6px;
   margin-right: 8px;
   border: dashed 1px #000;
   border-radius: 4px;
+  font-family: gothic-a1, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+}
+.work .pdf-box .pdf-inner-bottom button:first-child {
+  margin-left: -2px;
 }
 .work .pdf-box .pdf-inner-bottom button:last-child {
   margin: 0;
@@ -1064,6 +1102,9 @@ footer {
   left: -280px;
 }
 @media (max-width: 900px) {
+  .work .work-info {
+    border-bottom: solid 6px #000;
+  }
   .work .work-info .work-info-top h2, .work .work-info .work-info-top p {
     font-size: 19px;
   }
@@ -1078,6 +1119,9 @@ footer {
   }
   .work .work-info .work-info-bottom .book-year {
     margin-left: 40px;
+  }
+  .work .work-image {
+    border-bottom: solid 6px #000;
   }
   .work .work-image .work-caption {
     right: -3%;
@@ -1095,8 +1139,6 @@ footer {
     width: 300px;
   }
   .work .pdf-box .pdf-inner-bottom button {
-    font-size: 13px;
-    padding: 6px 8px 4px 8px;
     margin-right: 4px;
   }
   .work .pdf-box .pdf-inner-bottom button:last-child {
@@ -1108,6 +1150,36 @@ footer {
   .work.right .work-image .work-caption.hide {
     left: -240px;
   }
+}
+
+.work-slide {
+  width: 100%;
+  padding: 40px 200px;
+  margin: 0 auto;
+  background: #282828;
+  border-bottom: solid 8px #000;
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  .work-slide {
+    padding: 20px 40px;
+    border-bottom: solid 6px #000;
+  }
+}
+.work-slide .swiper-wrapper {
+  width: 100%;
+}
+.work-slide .swiper-wrapper .swiper-slide {
+  width: 100%;
+  border: solid 4px #000;
+}
+@media (max-width: 900px) {
+  .work-slide .swiper-wrapper .swiper-slide {
+    border: solid 3px #000;
+  }
+}
+.work-slide .swiper-wrapper .swiper-slide img {
+  width: 100%;
 }
 
 body.accessibility header,

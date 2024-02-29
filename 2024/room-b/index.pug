@@ -1,0 +1,377 @@
+doctype html
+html
+  head
+    //- Google tag (gtag.js)
+    script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-XEGHJM83T2')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XEGHJM83T2');
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='Title' content='Room B - OPP 2024 SPRING «New Face»')
+    meta(property='og:title' content='Room B - OPP 2024 SPRING «New Face»')
+    meta(property='og:type' content='website')
+    meta(property='og:url' content='https://oopppp.xyz/2024/room-b')
+    meta(name='Description' content='OPP의 2024년 봄 구성원들은 자신이 좋아하고 널리 알리고 싶은 다섯 권의 책을 추천한 뒤 각 책을 감쌀 수 있는 책싸개를 디자인했습니다. 책의 제목, 내용 전체 혹은 문장 한 줄, 기존의 표지, 관련된 개인적 경험 등 서로 다른 관점에서 서로 다른 방식으로 재해석된 이 책싸개들은 방문자에게 인쇄 가능한 PDF 파일로 제공됩니다.')
+    meta(property='og:description' content='OPP의 2024년 봄 구성원들은 자신이 좋아하고 널리 알리고 싶은 다섯 권의 책을 추천한 뒤 각 책을 감쌀 수 있는 책싸개를 디자인했습니다. 책의 제목, 내용 전체 혹은 문장 한 줄, 기존의 표지, 관련된 개인적 경험 등 서로 다른 관점에서 서로 다른 방식으로 재해석된 이 책싸개들은 방문자에게 인쇄 가능한 PDF 파일로 제공됩니다.')
+    meta(property='og:image' content='/assets/images/meta/og-newface.jpg')
+    link(rel='apple-touch-icon' sizes='57x57' href='/2024/assets/images/favicon/apple-icon-57x57.png')
+    link(rel='apple-touch-icon' sizes='60x60' href='/2024/assets/images/favicon/apple-icon-60x60.png')
+    link(rel='apple-touch-icon' sizes='72x72' href='/2024/assets/images/favicon/apple-icon-72x72.png')
+    link(rel='apple-touch-icon' sizes='76x76' href='/2024/assets/images/favicon/apple-icon-76x76.png')
+    link(rel='apple-touch-icon' sizes='114x114' href='/2024/assets/images/favicon/apple-icon-114x114.png')
+    link(rel='apple-touch-icon' sizes='120x120' href='/2024/assets/images/favicon/apple-icon-120x120.png')
+    link(rel='apple-touch-icon' sizes='144x144' href='/2024/assets/images/favicon/apple-icon-144x144.png')
+    link(rel='apple-touch-icon' sizes='152x152' href='/2024/assets/images/favicon/apple-icon-152x152.png')
+    link(rel='apple-touch-icon' sizes='180x180' href='/2024/assets/images/favicon/apple-icon-180x180.png')
+    link(rel='icon' type='image/png' sizes='192x192' href='/2024/assets/images/favicon/android-icon-192x192.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/2024/assets/images/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='96x96' href='/2024/assets/images/favicon/favicon-96x96.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/2024/assets/images/favicon/favicon-16x16.png')
+    meta(name='msapplication-TileImage' content='/2024/assets/images/favicon/ms-icon-144x144.png')
+    meta(name='theme-color' content='#000000')
+    title Room B - OPP 2024 SPRING «New Face»
+    script.
+      (function(d) {var config = {kitId: 'sbe7hzx', scriptTimeout: 3000, async: true}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);
+    link(rel='stylesheet' href='/2024/assets/styles/common.css')
+    script(src='/assets/scripts/cssbrowserselector.js')
+    script(src='/2024/assets/scripts/common.js' defer)
+    script(src='/2024/assets/scripts/rooms.js' defer)
+    script(src='/assets/scripts/seokki-hangul-beta.js' defer)
+    swiper
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css')
+    script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
+
+  body#room
+    header#header
+      a(href='/2024' target='_self') 
+        img(src='/2024/assets/images/private/opp-2024-logo.svg' alt='OPP 2024 SPRING - NEW FACE')
+      button#btn-accessibility
+        img(src='/2024/assets/images/private/accessibility-icon.svg' alt='')
+      #info-accessibility
+        .info
+          p.tt 보기에 불편함을 겪고 계신가요?
+          p.tt 배경색을 없애보세요.
+        button#close-accessibility
+          img(src='/2024/assets/images/private/accessibility-close.svg' alt='')
+        button#toggle-accessibility
+          .if-on
+            p 접근성 끄기
+            p 현재 켠 상태
+          .if-off
+            p 접근성 켜기
+            p 현재 끈 상태
+
+    nav#nav.show.for-rooms
+      .inner
+        a(href='/2024/room-a' target='_self') [A]
+        a(href='/2024/room-b' target='_self') [B]
+        a(href='/2024/room-c' target='_self') [C]
+        a(href='/2024/room-d' target='_self') [D]
+        a#scroll-top
+          img.basic(src='/2024/assets/images/private/arrow-top.svg' alt='')
+          img.white(src='/2024/assets/images/private/arrow-top-white.svg' alt='')
+
+    main#main-room
+      section#front
+        h1 ROOM B
+        p.field 문학
+      section#list
+        ul
+          //- li
+          //-   .book-left
+          //-     p.book-designer.tt
+          //-   .book-right
+          //-     .book-top
+          //-       p.book-title.tt
+          //-     .book-bottom
+          //-       .book-bottom-left
+          //-         p.book-author.tt
+          //-         p.book-translator.tt
+          //-       .book-bottom-right
+          //-         p.book-publisher.tt
+          //-         p.book-year
+          li
+            .book-left
+              p.book-designer.tt 허진욱
+            .book-right
+              .book-top
+                p.book-title.tt 우울씨의 일일
+              .book-bottom
+                .book-bottom-left
+                  p.book-author.tt 함민복
+                .book-bottom-right
+                  p.book-publisher.tt 문학동네
+                  p.book-year 2020
+          li
+            .book-left
+              p.book-designer.tt 한정원
+            .book-right
+              .book-top
+                p.book-title.tt 사물들
+              .book-bottom
+                .book-bottom-left
+                  p.book-author.tt 조르주 페렉 지음
+                  p.book-translator.tt 김명숙 옮김
+                .book-bottom-right
+                  p.book-publisher.tt 펭귄클래식 코리아
+                  p.book-year 2007
+          li
+            .book-left
+              p.book-designer.tt 한정원
+            .book-right
+              .book-top
+                p.book-title.tt 잠재문학실험실
+              .book-bottom
+                .book-bottom-left
+                  p.book-author.tt 남종신, 손예원, 정인교
+                .book-bottom-right
+                  p.book-publisher.tt 작업실유령
+                  p.book-year 2013
+          li
+            .book-left
+              p.book-designer.tt 송유진
+            .book-right
+              .book-top
+                p.book-title
+                  span.tt 비정기 간행물 때 Volume 01: 
+                  br.only-m
+                  span.tt 잠이 오지 않을 때
+              .book-bottom
+                .book-bottom-left
+                  p.book-author.tt 조예은, 은모든, 김종완, 최유수, 김은지, 강혜빈, 오종길, 서이제, 김현경, 태재, 임진아, 듀나, 손현녕
+                .book-bottom-right
+                  p.book-publisher.tt 디자인이음
+                  p.book-year 2021
+          li
+            .book-left
+              p.book-designer.tt 배현
+            .book-right
+              .book-top
+                p.book-title.tt 문체 연습
+              .book-bottom
+                .book-bottom-left
+                  p.book-author.tt 레몽 크노 지음
+                  p.book-translator.tt 조재룡 옮김
+                .book-bottom-right
+                  p.book-publisher.tt 문학동네
+                  p.book-year 2020
+          li
+            .book-left
+              p.book-designer.tt 허진욱
+            .book-right
+              .book-top
+                p.book-title.tt 육체의 악마
+              .book-bottom
+                .book-bottom-left
+                  p.book-author.tt 레이몽 라디게 지음
+                  p.book-translator.tt 양진성 옮김
+                .book-bottom-right
+                  p.book-publisher.tt 문파랑
+                  p.book-year 2007
+
+      section#guide-description
+        p.tt 작품 설명은 눌러서 밀어낼 수 있습니다.
+        p.en Descriptions can be moved by clicking.
+
+      section#works
+        section.work.right
+          .work-info
+            .work-info-top
+              p.book-designer.tt 허진욱
+              h2.tt 우울씨의 일일
+            .work-info-bottom
+              p.book-author.tt 함민복
+              p.book-publisher.tt 문학동네
+              p.book-year 2020
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-1-1-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-1-2-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-1-3-min.jpg' alt='')
+            .work-caption
+              p.tt 『우울씨의 일일』을 쓴 함민복 시인은 날카로운 풍자를 통해 자본주의와 문명의 본질을 파헤친다. 그런 그의 첫 시집 『우울씨의 일일』을 더 담백하게 타이포그래피만을 사용해 표현했다.
+          .work-slide
+            .swiper-wrapper
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-1-4-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-1-5-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-1-6-min.jpg' alt='')
+          .pdf-box
+            .pdf-inner-top
+              p.tt PDF 다운로드
+            .pdf-inner-bottom
+              button 3월 3일부터 제공됩니다.
+
+        section.work
+          .work-info
+            .work-info-top
+              p.book-designer.tt 한정원
+              h2.tt 사물들
+            .work-info-bottom
+              p.book-author.tt 조르주 페렉 지음
+              p.book-translator.tt 김명숙 옮김
+              p.book-publisher.tt 펭귄클래식 코리아
+              p.book-year 2007
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-2-1-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-2-2-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-2-3-min.jpg' alt='')
+            .work-caption
+              p.tt 『사물들』은 갓 스무살이 된 제롬과 실비의 이야기를 담은 소설이다. 조르주 페렉(Georges Perec)의 감각적인 문체로 묘사된 60년대 프랑스를 배경으로 펼쳐지는 이야기 속에서 제롬과 실비는 부를 동경하고, 많은 것을 포기했다 재차 열망하고, 다른 곳으로 이주하고, 삶을 끝없이 떠돈다. 나는 그런 그들에게서 나의 모습을 보았고, 이제껏 삶을 떠돌아왔으며 앞으로도 그러할 나와 그들을 포장해줄 포장지를 디자인했다.
+          .work-slide
+            .swiper-wrapper
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-2-4-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-2-5-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-2-6-min.jpg' alt='')
+          .pdf-box
+            .pdf-inner-top
+              p.tt PDF 다운로드
+            .pdf-inner-bottom
+              button 3월 3일부터 제공됩니다.
+
+        section.work.right
+          .work-info
+            .work-info-top
+              p.book-designer.tt 한정원
+              h2.tt 잠재문학실험실
+            .work-info-bottom
+              p.book-author.tt 남종신, 손예원, 정인교
+              p.book-publisher.tt 작업실유령
+              p.book-year 2013
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-3-1-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-3-2-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-3-3-min.jpg' alt='')
+            .work-caption
+              p.tt 『잠재문학실험실』은 60년대 프랑스에서 형성된 울리포(OuLiPo)를 소개하는 책이자 시집이다. 울리포의 작가들은 여러 제약을 도구 삼아 창작의 잠재성을 해방하고 생산성의 벽을 허무는 시도를 했다. 나는 그러한 울리포의 정신을 이어받고 싶었지만 책에 쓰인 모든 제약과 규칙들을 이해하지는 못했기 때문에 나름의 규칙을 새로이 만들어보았다.
+              p
+                a.tt(href='https://danhan.kr/lab/knitting' target='_blank') 《뜨개질》
+                span.tt 은 스웨터의 실을 풀고 다시 뜨개질하는 행위처럼 이미지를 정해진 규칙에 따라 해체한 뒤 다시 새로운 이미지를 만드는 웹 도구다. 뜨개질의 실이 될 이미지를 불러오면 도구는 사용자가 지정한 세팅에 따라 이미지를 뜬다. 그리고 그 길이는 무한하다. 디지털 이미지는 뜬다고 소모되지 않기 때문에 도구는 컴퓨터 사양이 받쳐주는 한 영원히 뜨개질을 이어간다.
+          .work-slide
+            .swiper-wrapper
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-3-4-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-3-5-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-3-6-min.jpg' alt='')
+          .pdf-box
+            .pdf-inner-top
+              p.tt PDF 다운로드
+            .pdf-inner-bottom
+              button 3월 3일부터 제공됩니다.
+
+        section.work
+          .work-info
+            .work-info-top
+              p.book-designer.tt 송유진
+              h2
+                span.tt 비정기 간행물 때 Volume 01: 
+                br.only-m
+                span.tt 잠이 오지 않을 때
+            .work-info-bottom
+              p.book-author.tt 조예은, 은모든, 김종완, 최유수, 김은지, 강혜빈, 오종길, 서이제, 김현경, 태재, 임진아, 듀나, 손현녕
+              p.book-publisher.tt 디자인이음
+              p.book-year 2021
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-4-1-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-4-2-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-4-3-min.jpg' alt='')
+            .work-caption
+              p.tt 『잠이 오지 않을 때』는 13명의 작가가 전개한 꿈에 대한 짧은 소설들을 엮은 책이다. 꿈은 현실에서는 경험하지 못한 시공간으로 우리를 이끌어준다. 소설 또한 그렇다고 생각한다. 그래서 나는 이것을 종이에 치환하여 생각해 보았다. 종이 또한 오프라인에 있는 것을 디지털로 변환할 때 표현의 한계가 없어지기 때문이다.
+              p.tt 종이를 자르고 붙이고 겹친 후 데이터로 변환하여 왜곡하는 과정을 거쳐 책 싸개를 디자인했다. 이를 세 가지 질감으로 다양하게 연출했다.
+          .work-slide
+            .swiper-wrapper
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-4-4-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-4-5-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-4-6-min.jpg' alt='')
+          .pdf-box
+            .pdf-inner-top
+              p.tt PDF 다운로드
+            .pdf-inner-bottom
+              button 3월 3일부터 제공됩니다.
+
+        section.work.right
+          .work-info
+            .work-info-top
+              p.book-designer.tt 배현
+              h2.tt 문체 연습
+            .work-info-bottom
+              p.book-author.tt 레몽 크노 지음
+              p.book-translator.tt 조재룡 옮김
+              p.book-publisher.tt 문학동네
+              p.book-year 2020
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-5-1-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-5-2-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-5-3-min.jpg' alt='')
+            .work-caption
+              p.tt 하나의 이야기를 99개의 이야기로 확장시킬 수 있다는 개념은 이 책에서 가장 흥미로운 부분 중 하나다. 또한 다양한 문체를 소개하면서도 소설로 분류된다는 점이 상당히 매력적으로 보였다. 저자는 하나의 이야기를 99개의 문체를 사용해 독자에게 각기 다른 메타포를 느끼게 한다.
+              p.tt 나는 이 책을 통해 저자 레몽 크노가 다양한 직업을 가졌다는 사실을 알게 되었다. 유머러스한 저자의 성격과 그에 대해 새롭게 알게 된 것들, 책의 내용들을 책싸개 디자인에 반영하고자 했다. 그래서 이 책싸개에서는 조금 특별하게 그를 소개한다. 레몽 크노가 가진 다양한 직업의 특성에 연결지어 ‘글을 쓰다’의 의미인 ‘지음’이라는 단어를 각기 다르지만 유사한 의미를 가진 다른 단어들로 바꿔 표현했다.
+          .work-slide
+            .swiper-wrapper
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-5-4-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-5-5-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-5-6-min.jpg' alt='')
+          .pdf-box
+            .pdf-inner-top
+              p.tt PDF 다운로드
+            .pdf-inner-bottom
+              button 3월 3일부터 제공됩니다.
+
+        section.work
+          .work-info
+            .work-info-top
+              p.book-designer.tt 허진욱
+              h2.tt 육체의 악마
+            .work-info-bottom
+              p.book-author.tt 레이몽 라디게 지음
+              p.book-translator.tt 양진성 옮김
+              p.book-publisher.tt 문파랑
+              p.book-year 2007
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-6-1-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-6-2-min.jpg' alt='')
+          .work-image
+            img(src='/2024/assets/images/public/works/opp-newface-b-6-3-min.jpg' alt='')
+            .work-caption
+              p.tt 『육체의 악마』는 열여섯 소년과 군인의 아내의 사랑 이야기다. 미성년자와 유부녀의 사랑이라는 자극적인 내용을 담고 있으며, 저자 레몽 라디게의 자전적 이야기라는 소문도 있다. 지금까지 번역된 이 책의 표지에는 자극적인 이미지가 실려있지만, 이번에 새롭게 디자인한 『육체의 악마』는 다양한 그래픽 요소로 소설을 표현했다.
+          .work-slide
+            .swiper-wrapper
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-6-4-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-6-5-min.jpg' alt='')
+              .swiper-slide
+                img(src='/2024/assets/images/public/works/opp-newface-b-6-6-min.jpg' alt='')
+          .pdf-box
+            .pdf-inner-top
+              p.tt PDF 다운로드
+            .pdf-inner-bottom
+              button 3월 3일부터 제공됩니다.
+
+      footer © 2024 OPP.

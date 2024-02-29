@@ -36,3 +36,9 @@ for (let caption of captions) {
     }
   });
 };
+
+// work slide
+const swiper = new Swiper('.work-slide', {
+  speed: 400,
+  spaceBetween: 20,
+});
