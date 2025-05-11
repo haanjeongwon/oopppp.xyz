@@ -6,12 +6,6 @@
   src: url('/assets/fonts/GothicA1-SemiBold-Custom.woff2') format('woff2')
   src: url('/assets/fonts/GothicA1-SemiBold-Custom.woff') format('woff')
 
-@font-face
-  font-family: 'gothic-a1'
-  font-weight: 800
-  src: url('/assets/fonts/GothicA1-ExtraBold.woff2') format('woff2')
-  src: url('/assets/fonts/GothicA1-ExtraBold.woff') format('woff')
-
 @mixin mobile
   @media (max-width: 900px)
     @content
@@ -19,8 +13,6 @@
 @mixin desktop
   @media (min-width: 901px)
     @content
-
-$lightgrey: #EAEAEA
 
 *
   border: 0
