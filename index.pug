@@ -34,49 +34,37 @@ html
     link(rel='icon' type='image/png' sizes='16x16' href='/assets/images/favicon/favicon-16x16.png')
     meta(name='msapplication-TileImage' content='/assets/images/favicon/ms-icon-144x144.png')
     title OPP
-    //- script.
-    //-   (function(d) {var config = {kitId: 'gyl0nfi', scriptTimeout: 3000, async: true}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);
     link(rel='stylesheet' href='https://use.typekit.net/osz6zna.css')
-    link(rel='stylesheet' href='/assets/styles/common.css')
+    link(rel='stylesheet' href='/assets/styles/main.css')
     script(src='/assets/scripts/cssbrowserselector.js')
-    script(src='/assets/scripts/common.js' defer)
+    script(src='/assets/scripts/main.js' defer)
     script(src='/assets/scripts/seokki-hangul-beta.js' defer)
   body
-
-    section#opp-main
-      .inner
-        img(src='/assets/images/private/opp-underconstruction.png')
-
-    section#opp-info
-      .inner
-        .info-wrap
-          p.ko.tt OPP는 온라인 환경에서의 출판 방법을 모색하는 일시적 프로젝트 그룹입니다. 매번 다른 사람들이 모여 온라인 전시회를 연 뒤 미련 없이 헤어집니다. 디자인을 매개로 멋진 동료들을 찾는 데에 목적이 있습니다.
-          p.en OPP is a temporary group of projects exploring ways to publish in an online environment. Each time, different people gather together to hold an online exhibition and then part ways without any regrets. It aims to find cool colleagues to work with through the medium of design.
-
-    main
+    #container
+      section#main
+        p.ko.tt OPP는 온라인 환경에서의 출판 방법을 모색하는 일시적 프로젝트 그룹입니다. 매번 다른 사람들이 모여 온라인 전시회를 연 뒤 미련 없이 헤어집니다. 디자인을 매개로 멋진 동료들을 찾는 데에 목적이 있습니다.
+        p.en OPP is a temporary group of projects exploring ways to publish in an online environment. Each time, different people gather together to hold an online exhibition and then part ways without any regrets. It aims to find cool colleagues to work with through the medium of design.
 
       section#upcoming-project
-        .section-title UPCOMING PROJECT
-        .project-wrap
-          a(href='/2024' target='_self')
-            h2
-              p OPP 2024 SPRING
-              p NEW FACE
-          a.img-wrap(href='/2024' target='_self')
-            img(src='/assets/images/public/opp-2024-spring-newface.png' alt='')
+        h2 Upcoming Proejct
+        ul
+          li
+            a(href='' target='_self')
+              img(src='/assets/images/public/opp-2025-summer-missedcall.png' alt='')
+            a(href='' target='_self')
+              .title OPP 2025 SUMMER «Missed Call»
 
       section#past-project
-        .section-title PAST PROJECT
-        .project-wrap
-          a(href='/2021' target='_self')
-            h2
-              p OPP 2021 SUMMER
-              p SHIPPING ROOM
-          a.img-wrap(href='/2021' target='_self')
-            img(src='/assets/images/public/opp-2021-summer-shippingroom.png' alt='')
-
-    footer
-      p
-        span © 
-        span.footer-year
-        span  OPP.
+        h2 Past Project
+        ul
+          li
+            a(href='/2024' target='_self')
+              img(src='/assets/images/public/opp-2024-spring-newface.png' alt='')
+            a(href='/2024' target='_self')
+              .title OPP 2024 SPRING «New Face»
+          li
+            a(href='/2021' target='_self')
+              img(src='/assets/images/public/opp-2021-summer-shippingroom.png' alt='')
+            a(href='/2021' target='_self')
+              .title OPP 2021 SUMMER «Shipping Room»
+      footer#footer
