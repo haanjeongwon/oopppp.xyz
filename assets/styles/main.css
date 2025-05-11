@@ -100,13 +100,7 @@ body {
 footer {
   width: 100%;
   padding: 10px 0 10px 0;
-  font-size: 15px;
   text-align: center;
-}
-@media (max-width: 900px) {
-  footer {
-    font-size: 13px;
-  }
 }
 
 #container {
@@ -118,7 +112,7 @@ footer {
 
 #main {
   width: 100%;
-  padding: 14px 20px 16px;
+  padding: 14px 20px 120px;
   margin: 0 auto;
   border-bottom: solid 2px #000;
 }
@@ -128,12 +122,12 @@ footer {
 
 #upcoming-project {
   width: 100%;
-  padding: 0px 20px 20px;
+  padding: 0px 20px 60px;
   margin: 0 auto;
   border-bottom: solid 2px #000;
 }
 #upcoming-project h2 {
-  margin: -2px 0 20px -10px;
+  margin: -2px 0 40px -10px;
 }
 #upcoming-project ul li img {
   width: 100%;
@@ -145,15 +139,15 @@ footer {
 
 #past-project {
   width: 100%;
-  padding: 0px 20px 20px;
+  padding: 0px 20px 60px;
   margin: 0 auto;
   border-bottom: solid 2px #000;
 }
 #past-project h2 {
-  margin: -2px 0 20px -10px;
+  margin: -2px 0 40px -10px;
 }
 #past-project ul li {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 #past-project ul li:last-child {
   margin-bottom: 0;
