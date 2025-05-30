@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /assets/images/private/
 Disallow: /2024/assets/images/private/
+Disallow: /2025/assets/images/private/

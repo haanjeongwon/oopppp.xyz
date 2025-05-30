@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XEGHJM83T2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XEGHJM83T2');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Title" content="Welcome to the 404. - OPP 2025 SUMMER «Missed Call»">
+  <meta property="og:title" content="Welcome to the 404. - OPP 2025 SUMMER «Missed Call»">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oopppp.xyz/2025/hanle">
+  <meta name="Description" content="OPP의 2025년 여름 구성원들은 404 에러 페이지의 개념을 각기 다른 관점과 방법으로 연구하고 웹페이지로 만들었습니다. 7개의 웹페이지가 6월 30일부터 7주간, 매주 금요일 오후 6시에 하나씩 공개됩니다.">
+  <meta property="og:description" content="OPP의 2025년 여름 구성원들은 404 에러 페이지의 개념을 각기 다른 관점과 방법으로 연구하고 웹페이지로 만들었습니다. 7개의 웹페이지가 6월 30일부터 7주간, 매주 금요일 오후 6시에 하나씩 공개됩니다.">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Welcome to the 404. - OPP 2025 SUMMER «Missed Call»</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .scroll-wrapper {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      height: 100vh;
+      gap: 0;
+      scrollbar-width: none;
+      transition: none;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .image-wrapper {
+      position: relative;
+      height: 100vh;
+      flex-shrink: 0;
+      width: auto;
+    }
+
+    .image-wrapper img {
+      position: absolute;
+      mix-blend-mode: multiply;
+      object-fit: contain;
+      max-height: 100vh;
+      pointer-events: none;
+    }
+
+    #noise-toggle {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2000;
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-family: sans-serif;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.3s ease;
+    }
+
+    #popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 300px;
+  height: auto;
+  background: rgba(255, 255, 255);
+  border: 1px solid #000;
+  padding: 20px 25px;
+  font-family: sans-serif;
+  font-size: 14px;
+  z-index: 3000;
+  overflow-y: auto;
+  display: none;
+  cursor: move;
+  box-sizing: border-box;
+}
+
+#speech-text {
+  /* 기존 스타일 유지 */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(1);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 25px;
+  min-width: 80px;
+  min-height: 50px;
+  max-width: 300px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 50%;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  z-index: 1600;
+  cursor: move;
+  white-space: pre-line;
+  pointer-events: auto;
+  transition: border-radius 0.3s ease, width 0.3s ease;
+}
+
+#logo {
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4000; /* 모든 요소 위에 표시되도록 충분히 큰 값 */
+  width: 300px; /* 필요에 따라 크기 조절 */
+  height: auto;
+  pointer-events: none; /* 클릭이나 드래그 등 이벤트에 방해되지 않도록 */
+}
+</style>
+</head>
+<body>
+
+  <img src="GIF/LOGO.gif" id="logo" />
+
+  <div id="speech-text">말풍선</div>
+
+  <!-- 설명 팝업 -->
+  <div id="popup">
+    <button id="popup-close" style="position:absolute; top:5px; right:8px; background:none; border:none; font-size:16px; cursor:pointer;">✕</button>
+    <strong>- 팻말에는 404의 역사가 적혀있다. -    </strong>
+
+    <br>
+    <br>
+    
+    "네! 제가 404를 묘사해 볼게요. <br> <br>
+
+    '불안정한, 텅 빈, 황량한, 애매모호한, 비어있는, 중단된, 
+    당황스러운, 기상천외한, 기이한, 
+    고립된, 길을 잃은 듯한, 어지럽혀진, 유쾌한, 유머러스한, 재치있는, 밝은.'<br><br>
+    
+    이 형용사들을 <a href="https://pixabay.com/ko/" target="_blank" style="color:blue; text-decoration:underline;">시각화</a> 해보면 충분히 404를 재현할 수 있을 거예요.<br><br>
+    더 궁금한 게 있나요?"
+  </div>
+
+  <!-- 버튼 -->
+  <button id="noise-toggle">"여긴 어디죠?"</button>
+
+  <!-- GIF 스크롤 이미지 -->
+  <div class="scroll-wrapper">
+    <div class="scroll-container" id="gif-scroll">
+
+
+      <div class="image-wrapper" style="width: 400px;">
+        <img src="GIF/1.gif" style="height: 100px; left: 0; top: 0;">
+      </div>
+
+      <div class="image-wrapper" style="width: 400px;">
+        <img src="GIF/1.gif" style="height: 100px; left: 0; bottom: 0;">
+      </div>
+
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/3.gif" style="height: 150px; top: 20vh;">
+      </div>
+
+      
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/8.gif" style="transform: scale(0.3) translateX(30%) translateY(200%);">
+      </div>
+
+      <div class="image-wrapper" style="width: 10px;">
+        <img src="GIF/7.gif" style="transform: scale(0.3) translateX(-300%) translateY(150%);">
+      </div>
+
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/18.gif" style="transform: scale(0.3) translateX(-100%) translateY(200%);">
+      </div>
+
+      <div class="image-wrapper" style="transform: scale(0.3) translateY(170%) ;">
+        <img src="GIF/7.gif">
+      </div>
+
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/8.gif" style="transform: scale(0.3) translateX(30%) translateY(250%);">
+      </div>
+
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/9.gif" style="top: 100%; transform: translateY(-100%);">
+      </div>
+      
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/10.webp" style="top: 50%; transform: translate(50%, -50%); ">
+      </div>
+      
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/11.gif" style="transform: scale(0.8) translateX(-450%) translateY(20%);">
+      </div>
+
+      <div class="image-wrapper" style="width: 300px; position: relative;">
+        <img src="GIF/12.gif" style="
+          position: absolute;
+          bottom: 5%;
+          left: 200%;
+          transform: translateX(-50%) scale(0.5);
+        ">
+      </div>
+
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/13.gif">
+      </div>
+
+
+      <div class="image-wrapper" style="width: 200px;">
+        <img src="GIF/6.gif" style="height: 150px; top: 20vh;">
+      </div>
+
+      <div class="image-wrapper" style="width: 100%; height: 100vh; overflow: hidden;">
+        <img src="GIF/26.webp" style="height: 100vh; width: auto; display: block; margin: 0 auto;">
+      </div>
+  
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/14.gif"style="bottom: 5%; transform: scale(0.5); translate(-10%, -50%); ">
+      </div>
+
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/15.gif">
+      </div>
+
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/17.gif">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/17.gif">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/17.gif">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/17.gif">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/17.gif">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/17.gif">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/2.gif" style="bottom: 0%; transform: scale(0.5) translate(100%, 50%); ">
+      </div>
+      <div class="image-wrapper" style="width: 30px;">
+        <img src="GIF/19.gif">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/21.gif" style="transform: scale(0.3) translateX(-100%) translateY(0%);">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/22.gif" style="transform: scale(0.3) translateX(-80%) translateY(50%);">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/23.gif">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/24.webp"style="top: 50%; transform: scale(0.1) translateX(140%) translateY(-60%);">
+      </div>
+      <div class="image-wrapper" style="width: 850px;">
+        <img src="GIF/25.gif">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/28.gif">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/30.gif">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/31.gif" style="transform: scale(0.3) translateX(-80%) translateY(200%);">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/32.gif" style="top: 50%; transform: translate(50%, -50%); ">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/36.gif">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/33.gif">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/34.gif">
+      </div>
+      <div class="image-wrapper" style="width: 300px;">
+        <img src="GIF/35.gif">
+      </div>
+      <div class="image-wrapper" style="width: 400px;">
+        <img src="GIF/4.gif" style="height: 200px; left: 0; top: 300px;">
+      </div>
+      <div class="image-wrapper" style="width: 900px;">
+        <img src="GIF/29.gif">
+      </div>
+      <div class="image-wrapper" style="width: 200px;">
+        <img src="GIF/37.gif" style="transform: scale(0.3) translateX(-80%) translateY(200%);">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/38.gif" style="transform: scale(0.3) translateX(-80%) translateY(200%);">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/5.gif" style="height: 100px; left: 500px; top: 70vh;">
+      </div>
+      <div class="image-wrapper" style="width: 100px;">
+        <img src="GIF/39.webp" style="top: 50%; transform: translate(50%, -50%); ">
+      </div>
+     </div>
+  </div>
+
+  <script>
+    const scrollContainer = document.getElementById('gif-scroll');
+    const noiseToggleBtn = document.getElementById('noise-toggle');
+    const popup = document.getElementById('popup');
+    const popupCloseBtn = document.getElementById("popup-close");
+
+    // scroll-content 복제
+    const originalContent = Array.from(scrollContainer.children);
+    for (let i = 0; i < 2; i++) {
+      originalContent.forEach(el => {
+        scrollContainer.appendChild(el.cloneNode(true));
+      });
+    }
+
+    let autoScrollSpeed = 1.2;
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    scrollContainer.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      isUserScrolling = true;
+      scrollContainer.scrollLeft += e.deltaY * 2;
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isUserScrolling = false;
+      }, 500);
+    }, { passive: false });
+
+    function autoScroll() {
+      if (!isUserScrolling) {
+        scrollContainer.scrollLeft += autoScrollSpeed;
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+          scrollContainer.scrollLeft = 0;
+        }
+      }
+      requestAnimationFrame(autoScroll);
+    }
+    autoScroll();
+
+    noiseToggleBtn.addEventListener("click", () => {
+      popup.style.display = popup.style.display === "block" ? "none" : "block";
+    });
+
+    popupCloseBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    popupCloseBtn.addEventListener("touchstart", (e) => {
+      e.stopPropagation();
+      popup.style.display = "none";
+    });
+
+    // 드래그 기능
+    function makeDraggable(element) {
+      let isDragging = false;
+      let offsetX = 0, offsetY = 0;
+
+      function startDrag(e) {
+        const rect = element.getBoundingClientRect();
+        element.style.left = `${rect.left}px`;
+        element.style.top = `${rect.top}px`;
+        element.style.transform = 'none';
+        element.style.position = 'fixed';
+
+        if (e.type === 'mousedown') {
+          offsetX = e.clientX - rect.left;
+          offsetY = e.clientY - rect.top;
+        } else {
+          offsetX = e.touches[0].clientX - rect.left;
+          offsetY = e.touches[0].clientY - rect.top;
+        }
+
+        isDragging = true;
+        e.preventDefault();
+      }
+
+      function onDrag(e) {
+        if (!isDragging) return;
+
+        let clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        let clientY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+
+        const maxLeft = window.innerWidth - element.offsetWidth;
+        const maxTop = window.innerHeight - element.offsetHeight;
+        const newLeft = Math.min(Math.max(0, clientX - offsetX), maxLeft);
+        const newTop = Math.min(Math.max(0, clientY - offsetY), maxTop);
+
+        element.style.left = `${newLeft}px`;
+        element.style.top = `${newTop}px`;
+      }
+
+      function stopDrag() {
+        isDragging = false;
+      }
+
+      element.addEventListener("mousedown", startDrag);
+      element.addEventListener("touchstart", startDrag, { passive: false });
+      document.addEventListener("mousemove", onDrag);
+      document.addEventListener("touchmove", onDrag, { passive: false });
+      document.addEventListener("mouseup", stopDrag);
+      document.addEventListener("touchend", stopDrag);
+    }
+
+    makeDraggable(popup);
+    makeDraggable(document.getElementById('speech-text'));
+
+    // 텍스트 순환 출력
+    const speechTexts = [
+      "어서 오세요.\n여기는 404에러입니다.",
+      "혹시 이곳에\n처음 오셨나요?",
+      "그렇군요.\n당황스러우시겠어요.",
+      "원래는 어디로\n가고자 하셨나요?",
+      "아, 그곳이요.",
+      "그곳에 한 번에\n도착하는 분은\n거의 없더라고요.",
+      "모두들\n여기를 한 번씩\n거쳐가신답니다.",
+      "여긴 일종의\n휴게소라 생각해 주시면\n좋을 것 같아요.",
+      "...",
+      "다들 그래요.\n다들 가고 싶은 곳이 있죠.",
+      "그곳만을 바라보며 달려가다\n여기서 길을 잃는답니다.",
+      "그리고 다들 좌절하죠.",
+      "제가 전부 다\n헤아릴 순 없지만...",
+      "그들은 여기 도착한 것을\n일종의 실패라 여기는 듯해요.",
+      "...",
+      "하지만 전 그렇게\n생각하지 않아요.",
+      "여기는 사실\n도착지에 가까워요.",
+      "넓은 공간 덕분에\n여기에선 목적없이\n마음편히 쉴 수 있죠.",
+      "풍경을 구경하며\n원래 목적지까지 가야 하는 이유를\n다시 한번 재고해 볼 수 있고요.",
+      "원래 내가 있던 곳이\n어떤 곳이었는지\n기억을 되살려 볼 수도 있죠.",
+      "잠깐 쉬다가\n다시 목적지로 출발해 보세요.",
+      "여기를 단순한\n임시 거처로만 여기지 말고",
+      "이 곳에서\n발견할 수 있는 것들을\n찾아 보세요.",
+      "그러다 보면 다시 그곳으로\n갈 힘이 생길 거예요.",
+      "언젠가 당신은\n이곳에 도착하기 위해\n다시 발걸음을 옮기게 될지도 몰라요.",
+      "그럼 오늘은 많이 피곤하실테니\n풍경을 보며 푹 쉬세요.",
+      "이만 안녕히."
+    ];
+
+    const speechElement = document.getElementById("speech-text");
+    speechElement.textContent = speechTexts[0];
+    let currentIndex = 0;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % speechTexts.length;
+      speechElement.textContent = speechTexts[currentIndex];
+    }, 3000);
+
+    
+  </script>
+</body>
+</html>

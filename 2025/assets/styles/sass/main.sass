@@ -1,0 +1,160 @@
+// *OPP 2025 SUMMER*
+
+@mixin mobile
+  @media (max-width: 900px)
+    @content
+
+@mixin desktop
+  @media (min-width: 901px)
+    @content
+
+@mixin breakpoint
+  @media (max-width: 1400px)
+    @content
+
+*
+  border: 0
+  margin: 0
+  padding: 0
+  font-size: 100%
+  font-display: block
+  font-style: normal
+  word-break: keep-all
+  text-decoration: none
+  list-style: none
+  box-sizing: border-box
+  vertical-align: baseline
+  background-color: transparent
+
+img
+  display: block
+
+input:focus, textarea:focus
+  outline: none
+
+a, a:hover, a:visited
+  color: #000
+  cursor: pointer
+  user-select: none
+
+button
+  color: #000
+  cursor: pointer
+  user-select: none
+
+.win body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-stroke: 0.2px
+
+//
+
+.tt
+  font-family: hillman-condensed-mn, dunkel-sans-cond-rounded, sans-serif
+  letter-spacing: -0.01em
+  word-spacing: -0.06em
+  span
+    position: relative
+    line-height: 1
+  .roman
+  .한글
+    font-size: 84%
+    letter-spacing: 0.03em
+    bottom: 0.04em
+  .숫자
+    font-variant-numeric: lining-nums
+
+header,
+footer,
+section
+  font-size: 30px
+  line-height: 1
+
+//
+
+body
+  // background: #F4F5F0
+
+header
+  display: flex
+  align-items: center
+  justify-content: center
+  position: fixed
+  top: 20px
+  left: 0
+  width: 100%
+  @include mobile
+    position: relative
+    top: 0
+    margin: 20px auto 80px
+  #logo
+    width: 240px
+    margin: 0 auto
+
+footer
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: center
+  position: fixed
+  bottom: 4px
+  left: 0
+  width: 100%
+  @include mobile
+    position: relative
+    margin: 80px auto 20px
+  .inner
+    width: 100%
+    max-width: 900px
+    padding: 16px
+    margin: 0 auto
+    p
+      text-align: center
+      &:nth-child(2),
+      &:nth-child(3)
+        margin-top: 20px
+
+section
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: center
+  width: 100vw
+  max-width: 900px
+  height: calc(100vh - 180px)
+  margin: 0 auto
+  @include mobile
+    height: auto
+  ul
+    width: 100%
+    li
+      background: #000
+      a, a:hover, a:visited
+        color: #FFF
+      a
+        display: flex
+        flex-flow: row nowrap
+        @include mobile
+          flex-flow: column nowrap
+        .li-l,
+        .li-c,
+        .li-r
+          padding: 4px 8px
+          @include mobile
+            padding: 12px 16px
+        .li-l
+          width: 20%
+          @include mobile
+            width: 100%
+            text-align: center
+        .li-c,
+        .li-r
+          width: 40%
+          text-align: right
+          @include mobile
+            width: 100%
+            text-align: center
+        .li-l,
+        .li-c
+          @include mobile
+            margin-bottom: 4px
