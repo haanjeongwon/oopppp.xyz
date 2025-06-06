@@ -1,0 +1,577 @@
+/* ===================== */
+/* 기본 초기화 및 공통 설정 */
+/* ===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0000aa;
+  height: 100vh;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15pt;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow: visible;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+}
+
+/* ===================== */
+/* INFO 페이지용 요소 */
+/* ===================== */
+
+.center-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-0.5px);
+  width: 1px;
+  height: 100%;
+  background: white;
+}
+
+.left-line {
+  left: 25%;
+}
+
+.left-top p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.left-text {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: calc(25% - 60px);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.center-text {
+  position: absolute;
+  top: 20px;
+  left: calc(25% + 30px);
+  width: calc(25% - 60px);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.right-top {
+  position: absolute;
+  top: 20px;
+  left: calc(50% + 30px);
+}
+
+.right-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% + 30px);
+}
+
+.right-top-link {
+  position: absolute;
+  top: 20px;
+  left: calc(50% + 30px);
+  font-size: 15pt;
+}
+
+/* ===================== */
+/* MAIN 페이지: 팝업 창 레이아웃 */
+/* ===================== */
+
+#wrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  word-break: keep-all;
+}
+
+.window-wrap {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .window-wrap {
+    font-size: 15px;
+  }
+}
+
+.window {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  padding: 10px;
+  background: #0000aa;
+  border: solid 1px white;
+  box-sizing: border-box;
+}
+
+.window.hide {
+  display: none;
+}
+
+.window-header {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 24px;
+}
+
+.window-header-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.window-header button {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+@media (max-width: 900px) {
+  .window-header button {
+    top: 10px;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.window-header button img {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.window-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+/* 팝업 크기 설정 - 데스크탑 */
+
+#wrapA {
+  width: calc(100vw - 560px);
+  height: calc(100vh - 240px);
+}
+#wrapB {
+  width: calc(100vw - 377px);
+  height: calc(100vh - 240px);
+}
+#wrapC {
+  width: calc(100vw - 354px);
+  height: calc(100vh - 200px);
+}
+#wrapD {
+  width: calc(100vw - 278px);
+  height: calc(100vh - 200px);
+}
+#wrapE {
+  width: calc(100vw - 233px);
+  height: calc(100vh - 146px);
+}
+#wrapF {
+  width: calc(100vw - 180px);
+  height: calc(100vh - 146px);
+}
+#wrapG {
+  width: calc(100vw - 137px);
+  height: calc(100vh - 108px);
+}
+#wrapH {
+  width: calc(100vw - 80px);
+  height: calc(100vh - 108px);
+}
+#wrapI {
+  width: calc(100vw - 70px);
+  height: calc(100vh - 70px);
+}
+
+@media (max-width: 900px) {
+  #wrapA {
+    width: calc(100vw - 280px);
+    height: calc(100vh - 120px);
+  }
+  #wrapB {
+    width: calc(100vw - 190px);
+    height: calc(100vh - 120px);
+  }
+  #wrapC {
+    width: calc(100vw - 180px);
+    height: calc(100vh - 100px);
+  }
+  #wrapD {
+    width: calc(100vw - 140px);
+    height: calc(100vh - 100px);
+  }
+  #wrapE {
+    width: calc(100vw - 120px);
+    height: calc(100vh - 70px);
+  }
+  #wrapF {
+    width: calc(100vw - 90px);
+    height: calc(100vh - 70px);
+  }
+  #wrapG {
+    width: calc(100vw - 70px);
+    height: calc(100vh - 50px);
+  }
+  #wrapH {
+    width: calc(100vw - 40px);
+    height: calc(100vh - 50px);
+  }
+  #wrapI {
+    width: calc(100vw - 35px);
+    height: calc(100vh - 35px);
+  }
+}
+
+.window-a {
+  width: 560px;
+  height: 240px;
+}
+.window-b {
+  width: 377px;
+  height: 240px;
+}
+.window-c {
+  width: 354px;
+  height: 200px;
+}
+.window-d {
+  width: 278px;
+  height: 200px;
+}
+.window-e {
+  width: 233px;
+  height: 146px;
+}
+.window-f {
+  width: 180px;
+  height: 146px;
+}
+.window-g {
+  width: 137px;
+  height: 108px;
+}
+.window-h {
+  width: 80px;
+  height: 108px;
+}
+.window-i {
+  width: 70px;
+  height: 70px;
+}
+
+@media (max-width: 900px) {
+  .window-a {
+    width: 280px;
+    height: 120px;
+  }
+  .window-b {
+    width: 190px;
+    height: 120px;
+  }
+  .window-c {
+    width: 180px;
+    height: 100px;
+  }
+  .window-d {
+    width: 140px;
+    height: 100px;
+  }
+  .window-e {
+    width: 120px;
+    height: 70px;
+  }
+  .window-f {
+    width: 90px;
+    height: 70px;
+  }
+  .window-g {
+    width: 70px;
+    height: 50px;
+  }
+  .window-h {
+    width: 40px;
+    height: 50px;
+  }
+  .window-i {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.tooltip-box {
+  position: absolute;
+  background: #0000aa;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: normal;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.tooltip-box.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== LAST 페이지: 최소 구성 축하 화면 ===== */
+
+/* 왼쪽 상단 텍스트 */
+.left-top {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  max-width: calc(50% - 60px);
+  text-align: left;
+  line-height: 1.6;
+  font-size: 20px;
+  word-break: keep-all;
+}
+
+/* 오른쪽 수직 중앙 버튼 */
+.right-center {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 40px);
+  transform: translateY(-50%);
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: #0000aa;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #e0e0ff;
+}
+
+.bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120vw;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* 모바일 */
+@media screen and (max-width: 600px) {
+  .bg-video {
+    width: 300vw;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* 아이패드 */
+@media screen and (max-width: 1024px) {
+  .bg-video {
+    width: 300vw;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* index.html 모바일 대응 */
+@media screen and (max-width: 600px) {
+  /* ======== 제목 (left-top) ======== */
+  .left-top {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transform: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: calc(100vw - 40px); /* 좌우 여백 고려 */
+    word-break: keep-all; /* 단어 단위로 줄바꿈 */
+  }
+
+  .left-top p {
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  /* ======== 가로선 (center-line) ======== */
+  .center-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-0.5px); /* 1px 높이라면 이게 더 정밀함 */
+    width: 100vw;
+    height: 1px;
+    background: white;
+  }
+
+  /* ======== 버튼 (right-top, right-bottom) ======== */
+  .right-top,
+  .right-bottom {
+    position: absolute;
+    top: calc(50% + 15px); /* center-line 기준 아래로 15px */
+    transform: none;
+  }
+
+  .right-top {
+    left: 20px;
+  }
+
+  .right-bottom {
+    left: 230px;
+  }
+
+  .right-top a,
+  .right-bottom a {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* === 가로선으로 바꾼 center-line, left-line === */
+  .vertical-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-0.5px); /* 1px 높이라면 이게 더 정밀함 */
+    width: 100vw;
+    height: 1px;
+    background: white;
+  }
+
+  .center-line {
+    top: 50%;
+    left: 0;
+    transform: translateY(-0.5px);
+  }
+
+  .left-line {
+    top: 25%;
+    left: 0;
+    transform: translateY(-0.5px);
+  }
+
+  /* === 텍스트 블록 === */
+  .left-text,
+  .center-text {
+    position: static; /* 흐름에 따라 배치되게 */
+    margin: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+
+  .left-text p,
+  .center-text p {
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  /* === BACK 링크 === */
+  .right-top-link {
+    position: absolute;
+    top: calc(50% + 15px); /* 가로선(center-line) 기준 아래로 15px */
+    left: 230px; /* 이전 INFO.... 버튼과 동일한 x좌표 */
+    font-size: 16px;
+    white-space: nowrap;
+    transform: none;
+  }
+}
+
+/* === 덮어씌운 코드 === */
+@media screen and (max-width: 600px) {
+  #info {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  #info * {
+    position: relative;
+    height: 100%;
+  }
+
+  #info .left-text {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+
+  #info .center-text {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+
+  #info .right-top-link {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    margin: 20px 0 50px 230px;
+  }
+
+  #info .vertical-line {
+    top: 0;
+    transform: none;
+    width: 100vw;
+    height: 1px;
+    background: white;
+  }
+}
