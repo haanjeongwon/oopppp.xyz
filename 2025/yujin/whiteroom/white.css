@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: break-word;
+    
+}
+
+html,body{
+    height: 100%;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.Letter{
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.Letter img{
+    width: 100%;
+    display: block;
+}
+
+#Contents{
+    position: relative;
+    width: 100vw;
+    height: calc(var(--vh, 1vh)*100);
+    overflow: hidden;
+}
+/* 우측하단스위치 */
+.Switch{
+    position: absolute;
+    left: 93.4vw;
+    top: 56.0625vh;
+    z-index: 10;
+}
+.Switch img{
+    width: 5vw;
+}
+/* 벽라인, 문 */
+.WallDoorWhite{
+    position: absolute;
+    top: -3vh;
+}
+.WallDoorWhite img{
+    width: 98%;
+}
+/* 침대 */
+.BedWhite{
+    position: absolute;
+    top: 18vh;
+    left: 4vw;
+    z-index: 3;
+}
+.BedWhite img{
+    width: 38vw;
+}
+/* 선반 */
+.BookWhite{
+    position: absolute;
+    top: 32vh;
+    left: 38vw;
+    z-index: 3;
+}
+.BookWhite img{
+    width: 11vw;
+}
+/* 램프 */
+.LampWhite{
+    position: absolute;
+    top: 0;
+    left: 10vw;
+}
+.LampWhite img{
+    width: 7vw;
+}
+
+/* 시계 */
+.ClockWhite{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 18px;
+    left: 60vw;
+    top: -1vh;
+}
+.ClockWhite img{
+    width: 6vw;
+}
+
+@media(max-width:900px){
+    .Letter-Letter img{
+        content: url("./img/LetterWhiteMobile.png");
+    }
+
+    #Contents {
+        height: 78vh;
+    }
+
+    .Switch {
+        top: unset;
+        left: unset;
+        bottom: 120px;
+        right: 30px;
+    }
+
+    .Switch img {
+        width: 50px;
+    }
+
+    .WallDoorWhite {
+        top: 140px;
+    }
+
+    .BedWhite {
+        top: unset;
+        bottom: 170px;
+    }
+
+    .BedWhite img {
+        width: 240px;
+    }
+
+    .BookWhite {
+        top: unset;
+        left: unset;
+        bottom: 200px;
+        right: 20px;
+    }
+
+    .BookWhite img {
+        width: 80px;
+    }
+
+    .LampWhite {
+        top: unset;
+        bottom: 320px;
+        left: 20px;
+    }
+
+    .LampWhite img {
+        width: 60px;
+    }
+
+    .ClockWhite {
+        top: 10px;
+        left: unset;
+        right: 80px;
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .ClockWhite img {
+        width: 60px;
+    }
+}

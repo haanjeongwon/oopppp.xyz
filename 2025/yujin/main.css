@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+
+body{
+    position: relative;
+    background-color: #ffe500;
+}
+
+.LetterWhite img{
+    width: 100vw;
+}
+.Nextdoor{
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translate(-35%);
+
+}
+.Nextdoor img{
+    width: 70%;
+}
+
+@media(max-width:900px){
+    .LetterWhite img{
+        content: url("./img/MainLetterMobile.png");
+    }
+
+    .Nextdoor {
+        top: 160%;
+    }
+}
