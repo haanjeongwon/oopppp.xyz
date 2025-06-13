@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+html, body{
+    height: 100%;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: black;
+}
+
+/* 모바일 전용 스타일 */
+@media(max-width:900px){
+    .Warning{
+        display: none;
+    }
+    .Letter{
+    position: relative;}
+    .Letter::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        background-image: url("./img/Warning-Mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+    .Letter-Letter{
+        z-index: 2;
+        position: relative;
+    }
+    .Letter-Letter img{
+        content: url("./img/LetterBlackMobile.png");
+    }
+    .Switch {
+        left: 6vw;
+        top: 13vh;
+        z-index: 11;
+      }
+
+      .Switch img {
+        width: 20vw;
+      }
+} 
+
+
+
+/* 헤더에 마우스 올리면 주의사항이 나오게 설정 */
+header{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+.Letter{
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.Letter-Letter{
+    transform-origin: top right;
+    transition: transform 0.8s ease;
+}
+.Letter img{
+    width: 100%;
+    display: block;
+}
+.Warning{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 1;
+}
+.Letter:hover .Letter-Letter{
+    transform: rotate(-45deg);
+}
+.Letter:hover .Warning{
+    opacity: 1;
+  }
+/* 헤더 제외 나머지 컨텐츠 */
+#Contents{
+    position: relative;
+    width: 100vw;
+    height: calc(var(--vh, 1vh)*100);
+    overflow: hidden;
+}
+/* 스위치 */
+.Switch{
+    position: absolute;
+    left: 93.4vw;
+    top: 56.0625vh;
+    z-index: 10;
+}
+.Switch img{
+    width: 5vw;
+}
+/* 벽,문 */
+.WallDoorWhite{
+    position: absolute;
+    top: -3vh;
+    left: 1vw;
+}
+.WallDoorWhite img{
+    width: 98%;
+}
+/* 침대+침대 hover하면 다른 침대 화면이 나온다 */
+.BedInteractive{
+    position: absolute;
+    top: 18vh;
+    left: 4vw;
+    width: 38vw;
+    height: auto;
+    z-index: 3;
+}
+.BedWhite, .BedHover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.BedWhite img, .BedHover img{
+    width: 100%;
+    display: block;
+}
+.BedHover{
+    opacity: 0;
+}
+.BedInteractive:hover .BedHover{
+    opacity: 1;
+}
+.BedInteractive:hover .BedWhite{
+    opacity: 0;
+}
+.BedQuestion{
+    position: absolute;
+    top: 42vh;
+    left: 25vw;
+}
+.BedQuestion img{
+    width: 5vw;
+}
+/* BedQuestion을 누르면 BedPopu이 나온다.  */
+#BedPopup:target{
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+}
+#BedPopup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+.FallingPopup img{
+    width: 300px;
+    height: auto;
+}
+/* 돌아다니는 캐릭터 */
+.Character{
+    position: absolute;
+    top: 25vh;
+    left: 50vw;
+    z-index: 2;
+}
+.Character img{
+    width: 30vw;
+}
+/* 돌아다니는 캐릭터 눌렀을때 팝업 */
+#CharacterPopup:target{
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+}
+#CharacterPopup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+.ThisMan img{
+    width: 300px;
+    height: auto;
+}
+#CharacterPopup-1:target{
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+}
+/* 램프 */
+.LampWhite{
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    z-index: 1;
+}
+.LampWhite img{
+    width: 7vw;
+}
+.LampWhite:hover{
+    transform: translate(10vw);
+    transition: 500ms ease-in;
+}
+.LampQuestion{
+    position: absolute;
+    top: 0;
+    left: 8vw;
+}
+/* 램프팝업마크업 */
+#LampPopup:target{
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+}
+#LampPopup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+.BlackPig img{
+    width: 300px;
+    height: auto;
+}
+/* 선반 */
+.BookWhite{
+    position: absolute;
+    top: 32vh;
+    left: 38vw;
+    z-index: 3;
+}
+.BookWhite img{
+    width: 11vw;
+}
+.BookWhite:hover{
+    transform: translate(10vw);
+    transition: 500ms ease-in;
+}
+.BookQuestion{
+    position: absolute;
+    top: 45vh;
+    left: 40vw;
+    z-index: 3;
+}
+/* 선반팝업마크업 */
+#BookPopup:target{
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+}
+#BookPopup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+.Teeth img{
+    width: 300px;
+    height: auto;
+}
+/* 시계 */
+.ClockWhite{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 18px;
+    left: 60vw;
+    top: -1vh;
+}
+.ClockWhite img{
+    width: 6vw;
+}
+.clock02:hover{
+    transform: rotate(180deg);
+    transition: 300ms ease-in;
+}
+#Clock02Popup:target{
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+}
+#Clock02Popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+.Water img{
+    width: 300px;
+    height: auto;
+}
+/* 별 */
+.Star img{
+    width: 70vw;
+}
+
+@media(max-width:900px){
+    .Letter-Letter img{
+        content: url("./img/LetterBlackMobile.png");
+    }
+
+    #Contents {
+        height: 78vh;
+    }
+
+    .Switch {
+        top: unset;
+        left: unset;
+        bottom: 120px;
+        right: 30px;
+    }
+
+    .Switch img {
+        width: 50px;
+    }
+
+    .WallDoorWhite {
+        top: 140px;
+    }
+
+    .BedInteractive {
+        top: unset;
+        bottom: 100px;
+    }
+
+    .BedWhite {
+        top: unset;
+        bottom: 70px;
+    }
+
+    .BedWhite img {
+        width: 240px;
+    }
+
+    .BookWhite {
+        top: unset;
+        left: unset;
+        bottom: 200px;
+        right: 20px;
+    }
+
+    .BookWhite img {
+        width: 80px;
+    }
+
+    .LampWhite {
+        top: unset;
+        bottom: 320px;
+        left: 20px;
+    }
+
+    .LampWhite img {
+        width: 60px;
+    }
+
+    .ClockWhite {
+        top: 10px;
+        left: unset;
+        right: 80px;
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .ClockWhite img {
+        width: 60px;
+    }
+
+    .star {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .star img {
+        width: 100vw;
+    }
+
+    .BedQuestion img,
+    .LampQuestion img,
+    .BookQuestion img {
+        width: 70px;
+    }
+
+    .BedQuestion {
+        top: unset;
+        left: 5px;
+        bottom: 40px;
+    }
+
+    .LampQuestion {
+        top: unset;
+        left: 50px;
+        bottom: 60%;
+    }
+
+    .BookQuestion {
+        top: unset;
+        left: unset;
+        bottom: 150px;
+        right: 80px;
+    }
+}
