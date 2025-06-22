@@ -211,6 +211,12 @@ body {
   }
 }
 
+#header.section {
+  padding-bottom: 10px;
+  background: #1E1E1E;
+  color: #F5F5F5;
+}
+
 .o03 p {
   font-weight: 400;
 }
