@@ -1,0 +1,229 @@
+@font-face
+  font-family: 'OYSTER'
+  font-weight: 200
+  src: url('/2025/jeongwon/src/fonts/OYSTER-UltraLight.woff2') format('woff2')
+  src: url('/2025/jeongwon/src/fonts/OYSTER-UltraLight.woff') format('woff')
+
+@font-face
+  font-family: 'OYSTER'
+  font-weight: 300
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Light.woff2') format('woff2')
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Light.woff') format('woff')
+
+@font-face
+  font-family: 'OYSTER'
+  font-weight: 400
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Regular.woff2') format('woff2')
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Regular.woff') format('woff')
+
+@font-face
+  font-family: 'OYSTER'
+  font-weight: 500
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Medium.woff2') format('woff2')
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Medium.woff') format('woff')
+
+@font-face
+  font-family: 'OYSTER'
+  font-weight: 600
+  src: url('/2025/jeongwon/src/fonts/OYSTER-SemiBold.woff2') format('woff2')
+  src: url('/2025/jeongwon/src/fonts/OYSTER-SemiBold.woff') format('woff')
+
+@font-face
+  font-family: 'OYSTER'
+  font-weight: 700
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Bold.woff2') format('woff2')
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Bold.woff') format('woff')
+
+@font-face
+  font-family: 'OYSTER'
+  font-weight: 800
+  src: url('/2025/jeongwon/src/fonts/OYSTER-ExtraBold.woff2') format('woff2')
+  src: url('/2025/jeongwon/src/fonts/OYSTER-ExtraBold.woff') format('woff')
+
+@font-face
+  font-family: 'OYSTER'
+  font-weight: 900
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Black.woff2') format('woff2')
+  src: url('/2025/jeongwon/src/fonts/OYSTER-Black.woff') format('woff')
+
+@mixin mobile
+  @media (max-width: 900px)
+    @content
+
+@mixin desktop
+  @media (min-width: 901px)
+    @content
+
+$offwhite: #F5F5F5
+$red: #A61111
+
+*
+  border: 0
+  margin: 0
+  padding: 0
+  font-size: 100%
+  font-display: block
+  font-style: normal
+  word-break: keep-all
+  text-decoration: none
+  list-style: none
+  box-sizing: border-box
+  vertical-align: baseline
+  background-color: transparent
+  -ms-overflow-style: none
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
+  user-select: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+img
+  display: block
+  width: 100%
+
+input:focus, textarea:focus
+  outline: none
+
+a, a:hover, a:visited
+  color: #000
+  cursor: pointer
+  user-select: none
+
+button
+  color: #000
+  cursor: pointer
+  user-select: none
+
+.win body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-stroke: 0.2px
+
+//
+
+.only-pc
+  @include mobile
+    display: none
+
+.only-m
+  @include desktop
+    display: none
+
+//
+
+body
+  font-size: 16px
+  line-height: 1.5
+  @include mobile
+    font-size: 14px
+
+.tt
+  font-family: Helvetica Neue, sans-serif
+  font-weight: 400
+  word-spacing: -0.02em
+  span
+    position: relative
+    line-height: 1
+  .roman
+    letter-spacing: 0.01em
+  .한글
+    font-family: OYSTER, sans-serif
+    font-weight: 400
+    font-size: 94%
+    letter-spacing: 0.04em
+    bottom: 0.07em
+  .마침표,
+  .쉼표
+    margin-left: -0.04em
+  .따옴표
+    bottom: 0.08em
+  .괄호
+    bottom: 0.065em
+    margin: 0 0.04em
+
+//
+
+body
+  background: #C0C0C0
+
+#container
+  width: 100%
+  max-width: 1000px
+  padding: 0 0 0 0
+  margin: 0 auto
+
+.section
+  position: relative
+  padding: 10px 16px 100px
+  border-top: solid 3px #FFF
+  border-left: solid 3px #FFF
+  border-right: solid 3px #808080
+  border-bottom: solid 3px #808080
+  .caption-l
+    position: absolute
+    bottom: 10px
+    left: 16px
+    font-size: 12px
+  .caption-r
+    position: absolute
+    bottom: 10px
+    right: 16px
+    font-size: 12px
+  &.alt
+    font-size: 60px
+    line-height: 1.4
+    padding: 2px 16px 100px
+    color: #000
+    background: #EEE
+    border-top: solid 3px #808080
+    border-left: solid 3px #808080
+    border-right: solid 3px #FFF
+    border-bottom: solid 3px #FFF
+    @include mobile
+      font-size: 24px
+      padding: 8px 16px 100px
+    &.word
+      font-size: 120px
+      line-height: 1.2
+      padding: 0px 16px 100px
+      @include mobile
+        font-size: 60px
+        padding: 8px 16px 100px
+
+.o03
+  p
+    font-weight: 400
+    .한글
+      font-weight: 300
+
+.o05
+  p
+    font-weight: 500
+    .한글
+      font-weight: 500
+
+.o06
+  p
+    font-weight: 600
+    .한글
+      font-weight: 600
+
+.o07
+  p
+    font-weight: 700
+    .한글
+      font-weight: 700
+
+.o08
+  p
+    font-weight: 800
+    .한글
+      font-weight: 800
+
+.o09
+  p
+    font-weight: 900
+    .한글
+      font-weight: 900
