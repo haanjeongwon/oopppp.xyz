@@ -1,0 +1,87 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 전체 배경 및 화면 중앙 정렬 */
+  body, html {
+    background: #D1D1D1;
+    font-family: Pretendard, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 컨테이너: 100vw, 100vh 기준 유지하면서 비율 유지 */
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1920px;
+    max-height: 1080px;
+    background-color: #D1D1D1;
+    overflow: hidden;
+  }
+  
+  /* 세로 회색 라인들 (비율 유지) */
+  .line, .line2, .line3, .line4, .line5, .line6, .line7 {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-left: 1px solid #8F8F8F;
+  }
+  
+  .line  { left: 12.5%; }
+  .line2 { left: 25%; }
+  .line3 { left: 37.5%; }
+  .line4 { left: 50%; }
+  .line5 { left: 62.5%; }
+  .line6 { left: 75%; }
+  .line7 { left: 87.5%; }
+  
+  /* 뒤로가기 버튼 */
+  .back-button {
+    position: absolute;
+    top: 10vh;
+    left: 0.8vw;
+    display: inline-flex;
+    padding: 1.5vh 1.3vw;
+    align-items: center;
+    gap: 1vw;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  /* SVG 아이콘 */
+  .svg-icon {
+    width: clamp(36px, 3.8vw, 74px);
+    height: auto;
+  }
+  
+  /* 페이드 효과 */
+  body.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  body.fade-out {
+    opacity: 1;
+    animation: fadeOut 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+  

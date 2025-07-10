@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 Station</title>
+  <link rel="stylesheet" href="css/02page.css" />
+  <link rel="stylesheet" href="./css/temp.css" />
+</head>
+<body>
+
+    <div class="temp only-m">
+      <p>이 웹페이지는 현재 데스크탑에서만 관람할 수 있습니다.<br>곧 모바일 버전도 업데이트될 예정이니 조금만 기다려주세요.</p>
+    </div>
+  <body class="fade-in">
+    <main class="screen">
+      <section class="container">
+        <div class="background">
+
+        </div>
+        </section>
+  </main>
+
+  <script>
+    document.body.addEventListener("click", () => {
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "03.html";
+      }, 800);
+    });
+  </script>
+</body>
+</html>

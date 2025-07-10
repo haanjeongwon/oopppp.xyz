@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>배송</title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/배송.css" />
+  <link rel="stylesheet" href="../css/temp.css" />
+</head>
+<body class="fade-in">
+
+    <div class="temp only-m">
+      <p>이 웹페이지는 현재 데스크탑에서만 관람할 수 있습니다.<br>곧 모바일 버전도 업데이트될 예정이니 조금만 기다려주세요.</p>
+    </div>
+  <div class="container">
+    <!-- 세로 라인 -->
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="line5"></div>
+    <div class="line6"></div>
+    <div class="line7"></div>
+
+    <!-- 뒤로가기 버튼 -->
+    <div class="back-button" onclick="history.back()">
+      <img src="../asset/back.svg" alt="뒤로가기" class="svg-icon" />
+    </div>
+
+    <!-- 각 아이콘 이미지 -->
+    <img src="../asset/레드.svg" class="레드-image float-1" alt="레드">
+    <img src="../asset/블랙.svg" class="블랙-image float-2" alt="블랙">
+    <img src="../asset/핑크.svg" class="핑크-image float-3" alt="핑크">
+    <img src="../asset/회색.svg" class="회색-image float-4" alt="회색">
+    <img src="../asset/초록.svg" class="초록-image float-5" alt="초록">
+    <img src="../asset/주황.svg" class="주황-image float-6" alt="주황">
+    <img src="../asset/화이트.svg" class="화이트-image float-7" alt="화이트">
+    <img src="../asset/블루.svg" class="블루-image float-8" alt="블루">
+    <img src="../asset/옐로우.svg" class="옐로우-image" alt="옐로우">
+    <img src="../asset/배송XL.svg" class="delivery-image float-10" alt="delivery">
+
+    <!-- 텍스트 -->
+    <div class="headline-ko">1초에 20만 건, 인간은 이제 '터치'만 한다</div>
+    <div class="headline-en">200,000 times a second 
+        <br />— all it takes now is a human touch.</div>
+    <div class="body-text">
+        불교 윤회 사상에서 전생 기억은 업(karma)을 이해하는 방식이다. 
+        <br />2023년 기준, 아마존은 1초당 약 200,000건의 주문 처리 요청을 서버가 받는다.
+        <br />이 주문들은 단순 데이터가 아니라, 물류센터·배송망·가격 책정·교환/반품 정책·추천 
+        <br />알고리즘 등 100개 이상의 결정 요소에 의해 즉시 분해된다. 우리의 한 번의 터치만
+        <br />으로, 시스템은 수백 개의 일을 동시에 판단하게 된다.
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('fade-in');
+      });
+    });
+  </script>
+</body>
+</html>

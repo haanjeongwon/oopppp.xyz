@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/03page.css" />
+    <link rel="stylesheet" href="./css/temp.css" />
+    <title>404 Station</title>
+  </head>
+  <body>
+
+    <div class="temp only-m">
+      <p>이 웹페이지는 현재 데스크탑에서만 관람할 수 있습니다.<br>곧 모바일 버전도 업데이트될 예정이니 조금만 기다려주세요.</p>
+    </div>
+    <main class="screen">
+        <section class="overlap-group-wrapper">
+          <div style="width: 1920px; height: 1080px; position: relative; background: #C8C8C8; overflow: hidden">
+              <div class="svg-wrapper">
+                  <img src="./asset/길.svg" alt="아이콘1" class="icon" id="icon1" />
+                  <img src="./asset/승객.svg" alt="아이콘2" class="icon" id="icon2"/>
+                  <img src="./asset/산책.svg" alt="아이콘3" class="icon" id="icon3"/>
+                  <img src="./asset/기억.svg" alt="아이콘4" class="icon" id="icon4"/>
+                  <img src="./asset/도시.svg" alt="아이콘5" class="icon" id="icon5"/>
+                  <img src="./asset/회상.svg" alt="아이콘6" class="icon" id="icon6"/>
+                  <img src="./asset/바람.svg" alt="아이콘7" class="icon" id="icon7"/>
+                  <img src="./asset/배송.svg" alt="아이콘8" class="icon" id="icon8"/>
+                  <img src="./asset/터치.svg" alt="아이콘9" class="icon" id="icon9"/>
+                  <img src="./asset/감독.svg" alt="아이콘10" class="icon" id="icon10"/>
+                </div>
+          </div>
+        </section>
+      </main>
+      <script>
+        // 페이드인 효과
+        window.addEventListener('DOMContentLoaded', () => {
+          requestAnimationFrame(() => {
+            document.body.classList.add('fade-in');
+          });
+        });
+      
+        // 각 아이콘 클릭 시 다른 페이지로 이동
+        const iconRoutes = {
+        icon1: "pages/길.html",
+        icon2: "pages/승객.html",
+        icon3: "pages/산책.html",
+        icon4: "pages/기억.html",
+        icon5: "pages/도시.html",
+        icon6: "pages/회상.html",
+        icon7: "pages/바람.html",
+        icon8: "pages/배송.html",
+        icon9: "pages/터치.html",
+        icon10:"pages/감독.html"
+          };
+      
+        Object.entries(iconRoutes).forEach(([id, targetPage]) => {
+          const icon = document.getElementById(id);
+          if (icon) {
+            icon.addEventListener("click", (event) => {
+              event.stopPropagation(); // 혹시 body에 클릭 이벤트 있을 경우 방지
+              document.body.classList.remove("fade-in");
+              document.body.classList.add("fade-out");
+              setTimeout(() => {
+                window.location.href = targetPage;
+              }, 1000); // CSS transition 시간과 맞추기
+            });
+          }
+        });
+      </script>
+  </body>
+</html>

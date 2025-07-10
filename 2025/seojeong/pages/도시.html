@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>도시 — 살아있는 팔림프세스트(palimpsest)</title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/도시.css" />
+  <link rel="stylesheet" href="../css/temp.css" />
+</head>
+<body class="fade-in">
+
+    <div class="temp only-m">
+      <p>이 웹페이지는 현재 데스크탑에서만 관람할 수 있습니다.<br>곧 모바일 버전도 업데이트될 예정이니 조금만 기다려주세요.</p>
+    </div>
+  <div class="container">
+    <!-- 세로 라인 -->
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="line5"></div>
+    <div class="line6"></div>
+    <div class="line7"></div>
+
+    <!-- 뒤로가기 버튼 -->
+    <div class="back-button" onclick="history.back()">
+      <img src="../asset/back.svg" alt="뒤로가기" class="svg-icon" />
+    </div>
+
+    <!-- 각 아이콘 이미지 -->
+    <img src="../asset/_다홍.svg" class="다홍-image float-1" alt="다홍">
+    <img src="../asset/옐로우.svg" class="옐로우-image float-2" alt="옐로우">
+    <img src="../asset/핑크.svg" class="핑크-image float-3" alt="핑크">
+    <img src="../asset/회색.svg" class="회색-image float-4" alt="회색">
+    <img src="../asset/초록.svg" class="초록-image float-5" alt="초록">
+    <img src="../asset/주황.svg" class="주황-image float-6" alt="주황">
+    <img src="../asset/화이트.svg" class="화이트-image float-7" alt="화이트">
+    <img src="../asset/블루.svg" class="블루-image float-8" alt="블루">
+    <img src="../asset/레드.svg" class="레드-image" alt="레드">
+    <img src="../asset/도시 XL.svg" class="city-image float-10" alt="city">
+
+    <!-- 텍스트 -->
+    <div class="headline-ko">도시 — 살아있는 팔림프세스트</div>
+    <div class="headline-en">The city — a living palimpsest.</div>
+    <div class="body-text">
+        팔림프세스트는 고대 두루마리, 문서 등을 일부러 지우거나 훼손하면서 
+        <br />새로운 내용을 덧씌우는 고대의 필사 기술이다. 도시는 이처럼 역사적 층위가
+        <br />중첩되어 현재의 도시 경관에 반영된다. 과거의 흔적이 완전히 지워지지 않고 
+        <br /> 남아, 새로운 시대의 요소와 공존하며 도시의 정체성을 형성하는 과정을 
+        <br />의미한다. 대표적인 예시로는 로마, 아테네, 예루살렘 등이 있으며, 이러한 
+        <br />도시들은 고대 유적과 현대 건축물이 공존하며 시간의 흐름을 보여준다. 
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('fade-in');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>저승을 향한 왕의 산책로, 이제는 누구나 밟을 수 있는 길이 되다.</title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/승객.css" />
+  <link rel="stylesheet" href="../css/temp.css" />
+</head>
+<body class="fade-in">
+
+    <div class="temp only-m">
+      <p>이 웹페이지는 현재 데스크탑에서만 관람할 수 있습니다.<br>곧 모바일 버전도 업데이트될 예정이니 조금만 기다려주세요.</p>
+    </div>
+  <div class="container">
+    <!-- 세로 라인 -->
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="line5"></div>
+    <div class="line6"></div>
+    <div class="line7"></div>
+
+    <!-- 뒤로가기 버튼 -->
+    <div class="back-button" onclick="history.back()">
+      <img src="../asset/back.svg" alt="뒤로가기" class="svg-icon" />
+    </div>
+
+    <!-- 각 아이콘 이미지 -->
+    <img src="../asset/_다홍.svg" class="다홍-image float-1" alt="다홍">
+    <img src="../asset/블랙.svg" class="블랙-image float-2" alt="블랙">
+    <img src="../asset/핑크.svg" class="핑크-image float-3" alt="핑크">
+    <img src="../asset/회색.svg" class="회색-image float-4" alt="회색">
+    <img src="../asset/초록.svg" class="초록-image float-5" alt="초록">
+    <img src="../asset/주황.svg" class="주황-image float-6" alt="주황">
+    <img src="../asset/화이트.svg" class="화이트-image float-7" alt="화이트">
+    <img src="../asset/블루.svg" class="블루-image float-8" alt="블루">
+    <img src="../asset/레드.svg" class="레드-image" alt="레드">
+    <img src="../asset/승객XL.svg" class="passenger-image float-10" alt="승객">
+
+    <!-- 텍스트 -->
+    <div class="headline-ko">《승객》, 또는 《파사제르카》(1963)</div>
+    <div class="headline-en">《Passenger》 or 《PASAZERKA》(1963)</div>
+    <div class="body-text">
+      죽기 전에 꼭 봐야 할 영화 1001편이자 1964년 칸 영화제 경쟁부문 상영작인 안제이 뭉크 
+      <br />감독의 마지막 영화. 중심인물인 리자가 아우슈비츠에서 SS 감독관으로 있었던 자신의 
+      <br />과거에 대해 두 가지의 회상 을 들려주는 내용의 영화다. 안제이 뭉크는 이 영화의 촬영 
+      <br />도중 자동차 사고로 세상을 떠났고, 비톨트 레시에비치 감독이 나레이션과 촬영 원본, 
+      <br />현장 스틸 등을 이용해 영화를 완성했다. 결국 <승객>은 다큐멘터리적 요소가 포함된 
+      <br /> 독특한 형식의 작품으로 남았다.
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('fade-in');
+      });
+    });
+  </script>
+</body>
+</html>

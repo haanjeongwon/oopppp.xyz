@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>감독</title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/감독.css" />
+  <link rel="stylesheet" href="../css/temp.css" />
+</head>
+<body class="fade-in">
+
+    <div class="temp only-m">
+      <p>이 웹페이지는 현재 데스크탑에서만 관람할 수 있습니다.<br>곧 모바일 버전도 업데이트될 예정이니 조금만 기다려주세요.</p>
+    </div>
+  <div class="container">
+    <!-- 세로 라인 -->
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="line5"></div>
+    <div class="line6"></div>
+    <div class="line7"></div>
+
+    <!-- 뒤로가기 버튼 -->
+    <div class="back-button" onclick="history.back()">
+      <img src="../asset/back.svg" alt="뒤로가기" class="svg-icon" />
+    </div>
+
+    <!-- 각 아이콘 이미지 -->
+    <img src="../asset/_다홍.svg" class="다홍-image float-1" alt="다홍">
+    <img src="../asset/옐로우.svg" class="옐로우-image float-2" alt="옐로우">
+    <img src="../asset/핑크.svg" class="핑크-image float-3" alt="핑크">
+    <img src="../asset/회색.svg" class="회색-image float-4" alt="회색">
+    <img src="../asset/초록.svg" class="초록-image float-5" alt="초록">
+    <img src="../asset/주황.svg" class="주황-image float-6" alt="주황">
+    <img src="../asset/블랙.svg" class="블랙-image float-7" alt="블랙">
+    <img src="../asset/블루.svg" class="블루-image float-8" alt="블루">
+    <img src="../asset/레드.svg" class="레드-image" alt="레드">
+    <img src="../asset/감독XL.svg" class="director-image float-10" alt="director">
+
+    <!-- 텍스트 -->
+    <div class="headline-ko">뒤늦게 등장한 개념, 영화 감독</div>
+    <div class="headline-en">A late-emerging concept: the film director</div>
+    <div class="body-text">
+        20세기 초반에는 스튜디오와 영화 제작자가 주로 창작의 중심이었으며, 예술보다는 
+<br />돈벌이를 중시하고 영화는 오락거리 정도로 여긴 까닭에 그 시절 영화감독은 그저 
+<br />'제작진 대표' 로 보았다. 그러다 제2차 세계 대전 이후 프랑스에서 앙드레 바쟁, 
+<br />프랑수아 트뤼포 등 당대 누벨바그를 이끈 이들에 의해 예술가로서의 영화감독을 
+<br />중시하며, 영화의 다른 요소들보다도 영화 감독의 개성과 철학을 더 중시하는 
+<br />비평적 관점인 작가주의가 탄생하였다.
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('fade-in');
+      });
+    });
+  </script>
+</body>
+</html>
