@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #D1D1D1;
+  font-family: Pretendard, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1920px;
+  max-height: 1080px;
+  overflow: hidden;
+}
+
+/* 회색 세로 라인 */
+.line, .line2, .line3, .line4, .line5, .line6, .line7 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-left: 0.05vw solid #8F8F8F;
+}
+.line { left: 12.5%; }
+.line2 { left: 25%; }
+.line3 { left: 37.5%; }
+.line4 { left: 50%; }
+.line5 { left: 62.5%; }
+.line6 { left: 75%; }
+.line7 { left: 87.5%; }
+
+.back-button {
+  position: absolute;
+  top: 1.48vh;
+  left: 0.57vw;
+  display: inline-flex;
+  padding: 1.71vh 1.28vw;
+  align-items: center;
+  gap: 1.07vw;
+  cursor: pointer;
+  z-index: 10;
+}
+.svg-icon {
+  width: 3.85vw;
+  height: auto;
+}
+
+/* float animation keyframes */
+@keyframes float1 { 0% {transform: translateY(0);} 50% {transform: translateY(-1.85vh);} 100% {transform: translateY(0);} }
+@keyframes float2 { 0% {transform: translateY(0);} 50% {transform: translateY(-1.39vh);} 100% {transform: translateY(0);} }
+@keyframes float3 { 0% {transform: translateY(0);} 50% {transform: translateY(-2.31vh);} 100% {transform: translateY(0);} }
+@keyframes float4 { 0% {transform: translateY(0);} 50% {transform: translateY(-0.93vh);} 100% {transform: translateY(0);} }
+@keyframes float5 { 0% {transform: translateY(0);} 50% {transform: translateY(-1.67vh);} 100% {transform: translateY(0);} }
+@keyframes float6 { 0% {transform: translateY(0);} 50% {transform: translateY(-1.11vh);} 100% {transform: translateY(0);} }
+@keyframes float7 { 0% {transform: translateY(0);} 50% {transform: translateY(-2.04vh);} 100% {transform: translateY(0);} }
+@keyframes float8 { 0% {transform: translateY(0);} 50% {transform: translateY(-1.57vh);} 100% {transform: translateY(0);} }
+@keyframes float9 { 0% {transform: translateY(0);} 50% {transform: translateY(-1.48vh);} 100% {transform: translateY(0);} }
+@keyframes float10 { 0% {transform: translateY(0);} 50% {transform: translateY(-1.30vh);} 100% {transform: translateY(0);} }
+
+/* 아이콘별 위치 및 애니메이션 */
+.다홍-image {
+  position: absolute; top: 5.93vh; left: 38.96vw;
+  width: 21.56vw; height: auto;
+  animation: float1 3s ease-in-out infinite;
+}
+.블랙-image {
+  position: absolute; top: 24.07vh; left: 53.85vw;
+  width: 17.08vw; height: auto;
+  animation: float2 3.4s ease-in-out infinite;
+}
+.핑크-image {
+  position: absolute; top: 19.72vh; left: 31.41vw;
+  width: 17.24vw; height: auto;
+  animation: float3 3.2s ease-in-out infinite;
+}
+.회색-image {
+  position: absolute; top: 34.07vh; left: 75.42vw;
+  width: 21.88vw; height: auto;
+  animation: float4 2.8s ease-in-out infinite;
+}
+.초록-image {
+  position: absolute; top: 23.33vh; left: 72.81vw;
+  width: 16.15vw; height: auto;
+  animation: float5 3.6s ease-in-out infinite;
+}
+.옐로우-image {
+  position: absolute; top: 15.74vh; left: 1.30vw;
+  width: 20.00vw; height: auto;
+  animation: float6 3.3s ease-in-out infinite;
+}
+.화이트-image {
+  position: absolute; top: 35.93vh; left: 45.63vw;
+  width: 16.35vw; height: auto;
+  animation: float7 3.5s ease-in-out infinite;
+}
+.블루-image {
+  position: absolute; top: 6.39vh; left: 63.80vw;
+  width: 12.50vw; height: auto;
+  animation: float8 3.1s ease-in-out infinite;
+}
+.레드-image {
+  position: absolute; top: 36.48vh; left: 25.42vw;
+  width: 16.67vw; height: auto;
+  animation: float9 3s ease-in-out infinite;
+}
+.reminiscence-image {
+  position: absolute; top: 14.91vh; left: 5.42vw;
+  width: 27.50vw; height: auto;
+  animation: float10 4s ease-in-out infinite;
+}
+
+/* 텍스트 영역 */
+.headline-ko {
+  position: absolute; top: 70.83vh; left: 3.44vw;
+  background: #fff;
+  font-family: KoreanNGL2R, sans-serif;
+  font-size: 1.88vw;
+  font-weight: 400;
+  line-height: 143%;
+  color: #000;
+  white-space: nowrap;
+}
+.headline-en {
+  position: absolute; top: 77.78vh; left: 3.44vw;
+  background: #fff;
+  font-family: KoreanNGL2R, sans-serif;
+  font-size: 1.88vw;
+  font-weight: 400;
+  line-height: 143%;
+  color: #000;
+  white-space: nowrap;
+}
+.body-text {
+  position: absolute; top: 70.74vh; left: 48.96vw;
+  width: 50.47vw;
+  background: #fff;
+  font-family: Pretendard, sans-serif;
+  font-size: 1.46vw;
+  font-weight: 400;
+  line-height: 170%;
+  color: #000;
+}
+
+/* 페이드 효과 */
+body.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+body.fade-out {
+  opacity: 1;
+  animation: fadeOut 1s ease forwards;
+}
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes fadeOut { to { opacity: 0; } }

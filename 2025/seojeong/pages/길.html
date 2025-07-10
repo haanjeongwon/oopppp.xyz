@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>저승을 향한 왕의 산책로, 이제는 누구나 밟을 수 있는 길이 되다.</title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/길.css" />
+  <link rel="stylesheet" href="../css/temp.css" />
+</head>
+<body class="fade-in">
+
+    <div class="temp only-m">
+      <p>이 웹페이지는 현재 데스크탑에서만 관람할 수 있습니다.<br>곧 모바일 버전도 업데이트될 예정이니 조금만 기다려주세요.</p>
+    </div>
+  <div class="container">
+    <!-- 세로 라인 -->
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="line5"></div>
+    <div class="line6"></div>
+    <div class="line7"></div>
+
+    <!-- 뒤로가기 버튼 -->
+    <div class="back-button" onclick="history.back()">
+      <img src="../asset/back.svg" alt="뒤로가기" class="svg-icon" />
+    </div>
+
+    <!-- 각 아이콘 이미지 -->
+    <img src="../asset/_다홍.svg" class="다홍-image float-1" alt="다홍">
+    <img src="../asset/블랙.svg" class="블랙-image float-2" alt="블랙">
+    <img src="../asset/핑크.svg" class="핑크-image float-3" alt="핑크">
+    <img src="../asset/회색.svg" class="회색-image float-4" alt="회색">
+    <img src="../asset/초록.svg" class="초록-image float-5" alt="초록">
+    <img src="../asset/주황.svg" class="주황-image float-6" alt="주황">
+    <img src="../asset/화이트.svg" class="화이트-image float-7" alt="화이트">
+    <img src="../asset/옐로우.svg" class="옐로우-image float-8" alt="옐로우">
+
+    <!-- 레드만 wrapper로 감싸기 -->
+    <div class="float-9 red-wrapper">
+      <img src="../asset/레드.svg" class="레드-image" alt="레드">
+    </div>
+
+    <img src="../asset/길 XL.svg" class="gill-image float-10" alt="길">
+
+    <!-- 텍스트 -->
+    <div class="headline-ko">저승을 향한 왕의 산책로,<br>이제는 누구나 밟을 수 있는 길이 되다.</div>
+    <div class="headline-en">The king's path to the afterlife has <br />now become a road anyone may tread.</div>
+    <div class="body-text">
+      스페인의 왕의 오솔길(Caminito del rey). 스페인의 안달루시아 지방
+      <br />말라가의 초로 폭포와 가이타네호 폭포 사이에 있는 절벽에 만들어진 좁은
+      <br />길이다. 약 7.7km이며, 그 중 하이라이트는 협곡 절벽 3km이다. 높이는 절벽
+      <br />에서 100m 상공이고, 그 밑은 낭떠러지다. 폭의 경우 좁은 곳은 1m도 채
+      <br />안되는 넓이를 지니고 있다. 1914년, 스페인 국왕 알폰소 13세가 이 길 일부를
+      <br />직접 걸어 방문하였고 이때부터 “왕의 작은 길”이라는 이름이 붙었다.
+      <br />수십 년간 방치되었고 안전 난간도 없이 100m 절벽을 걷는 위험한 루트였으
+      <br />며, 연이은 추락사고로 5명 사망하여 출입금지령이 내려졌다. 2015년의 대대
+      <br />적 개수로 인하여 현대에는 훨씬 안전한 산책로가 되었다.
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('fade-in');
+      });
+    });
+  </script>
+</body>
+</html>
