@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 not found: a worker's weekend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .landscape-img {
+      width: clamp(230px, 50vw, 300px);
+      height: auto;
+    }
+
+    .portrait-img {
+      height: clamp(230px, 30vw, 300px);
+      width: auto;
+    }
+
+    .random-img {
+      position: absolute;
+      pointer-events: auto;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .landscape-large {
+      width: clamp(350px, 50vw, 450px); /*모달(가로사진)*/
+      height: auto;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+
+    .portrait-large {
+      height: clamp(350px, 50vw, 450px); /*모달(세로사진)*/ 
+      width: auto;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+
+    #modalOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 2147483647;
+      cursor: default;
+    }
+
+    #header {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*z-index: 9999;*/
+      font-family: "Noto Sans KR", sans-serif;
+      color: rgb(108, 108, 108);
+      font-weight: 400;
+      font-size: clamp(23px, 2.5vw, 30px);
+      /*background-color: rgba(255, 255, 255, 0.8);*/
+      /*padding: 8px 12px;*/
+      /*user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;*/
+    }
+    #errortext {
+      padding: 0;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+
+    }
+
+    #insta a{
+      font-family: "Noto Sans KR", sans-serif;
+      color: rgb(108, 108, 108);
+      font-weight: 400;
+      font-size: clamp(16px, 2.5vw, 18px);
+      text-align: center;
+      display: block;
+      user-select: none;
+    }
+
+    #topinfo {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      padding: 15px 15px;
+      color: #aaaaaa;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: clamp(9px, 2.5vw, 16px);
+      font-family: sans-serif;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      white-space: normal;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+<div id="topinfo">
+    1.콜센터/2019/09:00-18:00<br> 2.편의점/2020/17:00-22:00, 08:00-12:00<br> 3.베이커리/2022/07:00-15:00<br> 4.고깃집/2022/17:00-15:00<br> 5.죽집/2023/14:00-20:30<br> 6.(작은)마트/2025/16:00-23:00<br>
+  </div>
+<div id="header"><div id="errortext"> 404 error:( not found</div><div id="insta"><a href="https://www.instagram.com/gibbeulhee.bobaejin?igsh=MXVpM25vemhwb3dubA%3D%3D&utm_source=qr">made by Jeon Hee-jin</a></div></div>
+<div id="modalOverlay"></div>
+
+<script>
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+  const backgroundImages = [
+    // (배경 이미지 비워둠)
+  ];
+
+  let bgIndex = 0;
+  document.body.style.backgroundImage = `url(${backgroundImages[bgIndex] || ''})`;
+  bgIndex = 1;
+
+  function cycleBackgroundImage() {
+    const img = new Image();
+    img.src = backgroundImages[bgIndex];
+    img.onload = () => {
+      document.body.style.backgroundImage = `url(${img.src})`;
+      bgIndex = (bgIndex + 1) % backgroundImages.length;
+    };
+  }
+
+  setInterval(cycleBackgroundImage, 3000);
+
+  const thumbUrls = [
+    "https://i.ibb.co/VYKRY9qM/memo1.png",
+    "https://i.ibb.co/pB9KPVHM/memo2.png",
+    "https://i.ibb.co/hR4WX8yV/memo3.png",
+    "https://i.ibb.co/SX4vCqTZ/memo4.png",
+    "https://i.ibb.co/SYbVNTM/memo5.png",
+    "https://i.ibb.co/2QVVDSD/memo6.png",
+    "https://i.ibb.co/Qg1QJZR/memo7.png",
+    "https://i.ibb.co/7JBZR3vH/memo8.png",
+    "https://i.ibb.co/dszpGmNF/memo9.png",
+    "https://i.ibb.co/Pvzp2tVw/memo10.png",
+    "https://i.ibb.co/gZqKZtQF/memo11.png",
+    "https://i.ibb.co/vxNSVyYb/memo12.png",
+    "https://i.ibb.co/bgP9d05h/memo13.png",
+    "https://i.ibb.co/dJ3BFD00/memo14.png",
+    "https://i.ibb.co/vxVQpT2f/memo15.png",
+    "https://i.ibb.co/mVtT314J/memo16.png",
+    "https://i.ibb.co/qLrrf3Xz/memo17.png",
+    "https://i.ibb.co/HRBtFjj/memo18.png",
+    "https://i.ibb.co/3yVcdwng/memo19.png",
+    "https://i.ibb.co/trJFxjP/memo20.png",
+    "https://i.ibb.co/pvHY9NKw/memo21.png",
+    "https://i.ibb.co/tMn1H1c8/memo22.png",
+    "https://i.ibb.co/ccVJNQkb/memo23.png",
+    "https://i.ibb.co/DPtPdQKT/memo24.png",
+    "https://i.ibb.co/M55hRd50/memo25.png",
+    "https://i.ibb.co/hnQp1Md/memo26.png",
+    "https://i.ibb.co/N2B6hs4Q/memo27.png",
+    "https://i.ibb.co/zWHhWG9M/memo28.png",
+    "https://i.ibb.co/G33GxhLH/memo29.png",
+    "https://i.ibb.co/99XkZNmZ/memo30.png",
+    "https://i.ibb.co/gZBsNJQ5/memo31.png",
+    "https://i.ibb.co/Q7W5Fn5G/memo32.png",
+    "https://i.ibb.co/Knsy5kt/memo33.png",
+    "https://i.ibb.co/wFzp9gCL/memo34.png",
+    "https://i.ibb.co/whsY7bMz/memo35.png",
+    "https://i.ibb.co/QtHq97J/memo36.png",
+    "https://i.ibb.co/cswCftL/memo37.png",
+    "https://i.ibb.co/spFNRWT8/memo38.png",
+    "https://i.ibb.co/wNNmpjx4/memo39.png",
+    "https://i.ibb.co/tM2hcY3T/memo40.png",
+    "https://i.ibb.co/spbMLqt0/memo41.png",
+    "https://i.ibb.co/1fwMw4CW/memo42.png",
+    "https://i.ibb.co/DDfGYpQs/memo43.png",
+    "https://i.ibb.co/wNk3RyFV/memo44.png",
+    "https://i.ibb.co/TMDVGcCw/memo45.png",
+    "https://i.ibb.co/C53TTRBq/memo46.png",
+    "https://i.ibb.co/Qv4dRZ33/memo47.png",
+    "https://i.ibb.co/RfGXXmC/memo48.png",
+    "https://i.ibb.co/0VnwNHXv/memo49.png",
+    "https://i.ibb.co/pBqrNXFS/memo50.png",
+    "https://i.ibb.co/238gcY4g/memo51.png",
+    "https://i.ibb.co/SwYy9QsY/memo52.png",
+    "https://i.ibb.co/b5n2Bnnc/memo53.png",
+    "https://i.ibb.co/VYv1qZw2/memo54.png",
+    "https://i.ibb.co/F43RgV2m/memo55.png",
+    "https://i.ibb.co/xq0D4y5f/memo56.png",
+    "https://i.ibb.co/b4mLp74/memo57.png",
+    "https://i.ibb.co/Rpd2LD9d/memo58.png",
+    "https://i.ibb.co/0jzR8L6T/memo59.png",
+    "https://i.ibb.co/FkWJ3LKy/memo60.png",
+    "https://i.ibb.co/H9p9x7p/memo61.png",
+    "https://i.ibb.co/ynP949pB/memo62.png",
+    "https://i.ibb.co/GQ50r4T4/memo63.png",
+    "https://i.ibb.co/R89bwhF/memo64.png",
+    "https://i.ibb.co/C3tKYf0P/memo65.png",
+    "https://i.ibb.co/TM9S5Msd/memo66.png",
+    "https://i.ibb.co/d0pM6skV/memo67.png",
+    "https://i.ibb.co/XZB0WDmc/memo68.png",
+    "https://i.ibb.co/wZyZWYnd/memo69.png",
+    "https://i.ibb.co/xKrhpsG5/memo70.png",
+    "https://i.ibb.co/DgVnv32L/memo71.png",
+    "https://i.ibb.co/7tbBC52V/memo72.png",
+    "https://i.ibb.co/Cs3hF0RX/memo73.png",
+    "https://i.ibb.co/YTB4w2hG/memo74.png",
+    "https://i.ibb.co/TxtDhsY7/memo75.png",
+    "https://i.ibb.co/1fkpCpRR/memo76.png",
+    "https://i.ibb.co/pBMsMQKp/memo77.png",
+    "https://i.ibb.co/zVFHFH4v/memo78.png",
+    "https://i.ibb.co/6c0QrJ6G/memo79.png",
+    "https://i.ibb.co/8nHD7mcD/memo80.png",
+    "https://i.ibb.co/6c3NmzSM/memo81.png",
+    "https://i.ibb.co/NdWDKwj9/memo82.png",
+    "https://i.ibb.co/zHxPXM1d/memo83.png",
+    "https://i.ibb.co/C3Rt3Jb9/memo84.png",
+    "https://i.ibb.co/4gSZ3wyG/memo85.png",
+    "https://i.ibb.co/r88mZYj/memo86.png",
+    "https://i.ibb.co/0yQcC3Nn/memo87.png",
+    "https://i.ibb.co/Cs0pfNmT/memo88.png",
+    "https://i.ibb.co/dJkG90SQ/memo89.png",
+    "https://i.ibb.co/9HG71fFf/memo90.png"
+  ];
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  shuffleArray(thumbUrls);
+
+  const imageElements = [];
+  let currentIndex = 0;
+  let zIndexCounter = 1;
+  const spreadFactor = 1; // 0.5~1.5 정도 조절하며 겹침 정도 변경 가능
+  let isModalOpen = false;
+  let autoTimer = null;
+  let idleTimer = null;
+
+  const modalOverlay = document.getElementById("modalOverlay");
+
+  function prepareImages() {
+    for (let i = 0; i < thumbUrls.length; i++) {
+      const img = document.createElement("img");
+      img.src = thumbUrls[i];
+      img.classList.add("random-img");
+      img.style.visibility = "hidden";
+
+      img.addEventListener("click", (e) => {
+        e.stopPropagation();
+        openModal(img.src);
+      });
+
+      img.onload = () => {
+        if (img.naturalWidth > img.naturalHeight) {
+          img.classList.add("landscape-img");
+        } else {
+          img.classList.add("portrait-img");
+        }
+      };
+
+      document.body.appendChild(img);
+      imageElements.push(img);
+    }
+  }
+
+  function placeImage(img) {
+    const imgWidth = img.offsetWidth;
+    const imgHeight = img.offsetHeight;
+
+    const maxX = window.innerWidth - imgWidth - 10;
+    const maxY = window.innerHeight - imgHeight - 10;
+    const minX = 10;
+    const minY = 10;
+
+    const spreadX = Math.min(800, maxX * spreadFactor);
+    const spreadY = Math.min(800, maxY * spreadFactor);
+
+    let x = (window.innerWidth - imgWidth) / 2 + (Math.random() - 0.5) * 2 * spreadX;
+    let y = (window.innerHeight - imgHeight) / 2 + (Math.random() - 0.5) * 2 * spreadY;
+
+    x = Math.max(minX, Math.min(x, maxX));
+    y = Math.max(minY, Math.min(y, maxY));
+
+    const angle = Math.random() * 360;
+
+    img.style.left = `${x}px`;
+    img.style.top = `${y}px`;
+    img.dataset.angle = angle;
+    img.style.transform = `rotate(${angle}deg)`;
+    img.style.zIndex = zIndexCounter++;
+  }
+
+  function showNextImageAndStartTimer() {
+    if (isModalOpen || currentIndex >= imageElements.length) return;
+
+    const img = imageElements[currentIndex];
+
+    function afterPlacement() {
+      img.style.visibility = "visible";
+      placeImage(img);
+      if (!autoTimer) {
+        autoTimer = setInterval(showNextImage, 450); // 이미지 생성 시간 조절
+      }
+    }
+
+    if (!img.complete) {
+      img.onload = afterPlacement;
+    } else {
+      afterPlacement();
+    }
+
+    currentIndex++;
+  }
+
+  function showNextImage() {
+    if (isModalOpen || currentIndex >= imageElements.length) return;
+
+    const img = imageElements[currentIndex];
+
+    if (!img.complete) {
+      img.onload = () => {
+        img.style.visibility = "visible";
+        placeImage(img);
+      };
+    } else {
+      img.style.visibility = "visible";
+      placeImage(img);
+    }
+
+    currentIndex++;
+  }
+
+  function startAutoMode() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = null;
+    showNextImageAndStartTimer();
+  }
+
+  function stopAutoMode() {
+    clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  function resetIdleTimer() {
+    if (idleTimer) clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => {
+      if (!isModalOpen && currentIndex < imageElements.length) {
+        startAutoMode();
+      }
+    }, 1000);
+  }
+
+  function openModal(imageSrc) {
+    stopAutoMode();
+    isModalOpen = true;
+
+    const img = new Image();
+    img.src = imageSrc;
+    img.alt = "확대 이미지";
+    img.draggable = false;
+
+    img.onload = () => {
+      if (img.naturalWidth > img.naturalHeight) {
+        img.classList.add("landscape-large");
+      } else {
+        img.classList.add("portrait-large");
+      }
+    };
+
+    modalOverlay.innerHTML = "";
+    modalOverlay.appendChild(img);
+    modalOverlay.style.display = "flex";
+  }
+
+  function closeModal() {
+    modalOverlay.style.display = "none";
+    isModalOpen = false;
+    if (currentIndex < imageElements.length) resetIdleTimer();
+  }
+
+  document.body.addEventListener("click", () => {
+    if (isModalOpen) return;
+    showNextImage();
+    stopAutoMode();
+    resetIdleTimer();
+  });
+
+  modalOverlay.addEventListener("click", closeModal);
+
+  window.addEventListener("resize", () => {
+    for (let i = 0; i < currentIndex; i++) {
+      placeImage(imageElements[i]);
+    }
+  });
+
+  prepareImages();
+
+  setTimeout(() => {
+    resetIdleTimer();
+  }, 1000);
+
+
+  window.onload = () => {
+    if (performance.navigation.type === 1) { // 새로고침인 경우
+      window.location.href = "/2025/heejin/index.html";
+    }
+  };
+
+</script>
+
+</body>
+</html>

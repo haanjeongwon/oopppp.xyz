@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>a worker's weekend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300&display=swap" rel="stylesheet">
+  <style>
+    #intro a {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 400;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-size: clamp(23px, 2.5vw, 30px);
+      color: black;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.3s;
+    }
+
+    #intro a:hover {
+      color: blue;
+      cursor: pointer;
+    }
+
+    .cursor::after {
+      content: "|";
+      animation: blink 1s step-start infinite;
+      margin-left: 4px;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .blink {
+      animation: blinkText 2s ease-in-out infinite;
+    }
+
+    @keyframes blinkText {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="intro">
+    <a href="./main.html" id="link">
+      about <span id="role" class="cursor"></span>'s weekend
+    </a>
+  </div>
+
+  <script>
+    const roles = ["worker", "student", "a 25-year-old", "전희진"];
+    const roleEl = document.getElementById("role");
+    const linkEl = document.getElementById("link");
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const current = roles[wordIndex];
+      if (isDeleting) {
+        charIndex--;
+        roleEl.textContent = current.substring(0, charIndex);
+      } else {
+        charIndex++;
+        roleEl.textContent = current.substring(0, charIndex);
+      }
+
+      let delay = isDeleting ? 60 : 120;
+
+      if (!isDeleting && charIndex === current.length) {
+        if (wordIndex === roles.length -1) {
+          // 마지막 단어 타이핑 완료
+          roleEl.textContent = current; // 전체 보여줌
+          // 3초 멈추고 깜빡이 시작
+          setTimeout(() => {
+            roleEl.classList.remove("cursor"); // 커서 제거
+            linkEl.classList.add("blink"); // 링크 전체 깜빡임 시작
+          }, 500);
+          return; // 타이핑 멈춤
+        } else {
+          delay = 1000;
+          isDeleting = true;
+        }
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex++;
+        delay = 400;
+      }
+
+      setTimeout(type, delay);
+    }
+
+    type();
+  </script>
+</body>
+</html>
